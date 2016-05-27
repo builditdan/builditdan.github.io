@@ -5,11 +5,11 @@ title: Portoflio
 <h4 style="color:red;"><center>Under construction</center></h4>
 On my portoflio page you can find information on projects that I have or are currently working on. I develop using Ruby on Rails, Javascript, HTML, CSS, jQuery, AngularJS, Wordpress, and various other technologies as needed. The majority of my work is stored in [Gitbub](https://github.com/builditdan) where I use the id **builditdan**.
 
-Preview | Project | Description | Info Page
+Preview | Projects | Description | Info Page
 ------------- | ------------- | -------------
-[<img src="img/bookemdanno.png" height="150" width="200">](https://bookemdanno.herokuapp.com/) | BookemDanno | A RoR site I built during my [bloc.io](http://bloc.io) training for easily storing and sharing bookmarks | <a href="/projects/bookemdanno.html">/projects/bookemdanno.html</a>
+[<img src="img/bookemdanno.png" height="150" width="200">](https://bookemdanno.herokuapp.com/) | BookemDanno | A RoR site I built during my [bloc.io](http://bloc.io) training for easily storing and sharing bookmarks | <a href="/_projects/bookemdanno.html">/_projects/bookemdanno.html</a>
 
-[<img src="img/wikipad.png" height="150" width="200">](https://wikipad1.herokuapp.com/) | Wiki Pad | A RoR site I built during my [bloc.io](http://bloc.io) training for creating and sharing wikis | <a href="/projects/wikipad.html">/projects/wikipad.html</a>
+[<img src="img/wikipad.png" height="150" width="200">](https://wikipad1.herokuapp.com/) | Wiki Pad | A RoR site I built during my [bloc.io](http://bloc.io) training for creating and sharing wikis | <a href="/_projects/wikipad.html">/_projects/wikipad.html</a>
 
 
 [<img src="img/daniels111_blogspot.png" height="150" width="200">](http://daniels111.blogspot.com/) | Danny's Photograhy | A site that I occasionally update with photos | <a href="http://daniels111.blogspot.com/">http://daniels111.blogspot.com/</a>
