@@ -1,6 +1,7 @@
 ---
 layout: page
 title: BookemDanno
+hide: true
 ---
 
 ### URL
