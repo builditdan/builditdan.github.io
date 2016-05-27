@@ -10,9 +10,9 @@ I named my skill **Wordsmith Trivia** and spent additional time just creating al
 
 I did some thinking about what else I could develop. So in the spirit of sharing - below is a few use cases I was thinking of developing as time permits.
 
-![Remind me skill for Alexa](/img/alexa_skills.001.jpeg)
-![Message journal skill for Alexa](/img/alexa_skills.002.jpeg)
-![Food substitution skill for Alexa](/img/alexa_skills.003.jpeg)
+![Remind me skill for Alexa](/img/alexa_skills_001.jpeg)
+![Message journal skill for Alexa](/img/alexa_skills_002.jpeg)
+![Food substitution skill for Alexa](/img/alexa_skills_003.jpeg)
 
 This [site](http://lovemyecho.com/2016/03/04/complete-listing-of-alexa-skills-as-of-3416/) was helpful as I found it hard to get a complete listing of existing echo skills. Take care and hope you give Kevin's tutorial a try.
 
