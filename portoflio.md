@@ -7,7 +7,7 @@ On my portoflio page you can find information on projects that I have or are cur
 
 Preview | Projects | Description | Info Page
 ------------- | ------------- | -------------
-[<img src="img/bookemdanno.png" height="150" width="200">](https://bookemdanno.herokuapp.com/) | BookemDanno | A RoR site I built during my [bloc.io](http://bloc.io) training for easily storing and sharing bookmarks | <a href="projects/bookemdanno.html">projects/bookemdanno.html</a>
+[<img src="img/bookemdanno.png" height="150" width="200">](https://bookemdanno.herokuapp.com/) | BookemDanno | A RoR site I built during my [bloc.io](http://bloc.io) training for easily storing and sharing bookmarks | <a href="bookemdanno.html">bookemdanno.html</a>
 
 [<img src="img/wikipad.png" height="150" width="200">](https://wikipad1.herokuapp.com/) | Wiki Pad | A RoR site I built during my [bloc.io](http://bloc.io) training for creating and sharing wikis | <a href="/projects/wikipad.html">/projects/wikipad.html</a>
 
