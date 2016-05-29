@@ -1,6 +1,6 @@
 ---
 layout: page
-title: BookemDanno
+title: Another Pomodoro Timer
 hide: true
 ---
 ### URL
