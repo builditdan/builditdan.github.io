@@ -7,6 +7,16 @@ On my portoflio page you can find information on projects that I have or are cur
 
 <br>
 
+
+[<img src="img/apomodoro.png">](http://apomodoro.herokuapp.com/)<br>
+**Project Name:** Another Pomodoro Timer <br>
+**Description:** A AngularJS site I built during my [bloc.io](http://bloc.io) timing your activities using the Pomodoro Technique<br>
+**Info:** <a href="/projects/apomodoro.html">/projects/apomodoro.html</a><br>
+<div class="line-separator"></div>
+<br>
+
+
+
 [<img src="img/bookemdanno.png">](https://bookemdanno.herokuapp.com/)<br>
 **Project Name:** BookemDanno <br>
 **Description:** A RoR site I built during my [bloc.io](http://bloc.io) training for easily storing and sharing bookmarks<br>
