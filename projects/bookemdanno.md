@@ -10,6 +10,34 @@ hide: true
 ### Github URL
 [https://github.com/builditdan/bookemdanno](https://github.com/builditdan/bookemdanno)
 
+### Getting Started
+
+**Clone the Github application**
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+**Create the database**
+
+```
+rake db:create
+```
+
+**Migrating and seeding the database**
+
+```
+rake db:migrate
+rake db:seed
+```
+
+**Starting the local server**
+
+```
+rails s
+
+```
+
 ### Background and General Information
 I built this application during my Ruby on Rails training with [bloc.io](https://bloc.io).
 

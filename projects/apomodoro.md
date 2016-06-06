@@ -9,6 +9,26 @@ hide: true
 ### Github URL
 [https://github.com/builditdan/a_pomodoro](https://github.com/builditdan/a_pomodoro)
 
+### Getting Started
+
+**Clone the Github application**<br>
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+**Install grunt**<br>
+[http://gruntjs.com/getting-started](http://gruntjs.com/getting-started)
+
+Run the application using the Gruntfile's `default` task:
+
+```
+$ grunt
+```
+
+The default task runs a simple server on port 3000. To view it in a any browser, go to [http://localhost:3000](http://localhost:3000).
+
+>Note that unless the application is run [via Live Preview in Brackets](#use-in-brackets-live-preview), the browser will need to be refreshed to view the most recent changes.
+
 
 ### Background and General Information
 I built this JavaScript site during my front-end training with [bloc.io](https://bloc.io).
@@ -25,11 +45,11 @@ My biggest challenge in this project was learning when to use a angular [service
 In the end, I used a directive to handle the timer tasks since they were DOM focused  and added a service for task management activities. My thinking was the timer and page elements would be page focused whereas task services might be used throughout the website. That is if I expanded on the project. Another good read on this topic can be found at this thread at [stack overflow] (http://stackoverflow.com/questions/11171778/difference-between-service-directive-and-module).
 
 ### Highlights on scripts included
-* [angular](http://angular-ui.github.io/) for development
-* [Firebase](https://firebase.google.com/docs/) for storing tasks
-* [UI Router](https://github.com/angular-ui/ui-router) for angular routing
-* [Buzz Sound](http://buzz.jaysalvat.com/) for playing ding at the end of a timer
-* [Progress bar](https://github.com/crisbeto/angular-svg-round-progressbar) for displaying a progress bar
+* [`angular`](http://angular-ui.github.io/) for development
+* [`Firebase`](https://firebase.google.com/docs/) for storing tasks
+* [`UI Router`](https://github.com/angular-ui/ui-router) for angular routing
+* [`Buzz Sound`](http://buzz.jaysalvat.com/) for playing ding at the end of a timer
+* [`Progress bar`](https://github.com/crisbeto/angular-svg-round-progressbar) for displaying a progress bar
 
 ### Additional comments
 Do note that the tasks are the same for all users. A future enhancement would be to store them per user session or account. Obviously this shortcoming does not make the web page very useful for multiple users but this was a training exercise.

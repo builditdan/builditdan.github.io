@@ -8,14 +8,14 @@ theme:
   title: Dan's Blog
   avatar: builditdan.jpeg
   gravatar: # Email MD5 hash
-  description: "Dan's web portoflio and site for sharing information" # used by search engines
+  description: "Dan's web portfolio and site for sharing information" # used by search engines
 
   # Header and footer text
   header_text: >
      <h3>Hi!, my name is Dan and I am software engineer with experience in web and application development including project management.
      </h3>
      <br>
-     <h4>You can find my portoflio page <a href="portoflio.html">here<a></h4>
+     <h4>You can find my portfolio page <a style="color:orange;" href="portoflio.html">here<a></h4>
   header_text_feature_image: img/blue.jpeg
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>

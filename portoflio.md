@@ -1,10 +1,20 @@
 ---
 layout: page
-title: Portoflio
+title: Portfolio
 ---
 <h4 style="color:red;"><center>Under construction</center></h4>
 On my portoflio page you can find information on projects that I have or are currently working on. I develop using Ruby on Rails, Javascript, HTML, CSS, jQuery, AngularJS, Wordpress, and various other technologies as needed. The majority of my work is stored in [Gitbub](https://github.com/builditdan) where I use the id **builditdan**.
 
+<br>
+
+
+
+
+[<img src="img/blocchat.png">](http://blocchat1.herokuapp.com/)<br>
+**Project Name:** Bloc Chat<br>
+**Description:** A AngularJS site I built during my [bloc.io](http://bloc.io) timing your activities using the Pomodoro Technique<br>
+**Info:** <a href="/projects/blocchat.html">/projects/blocchat.html</a><br>
+<div class="line-separator"></div>
 <br>
 
 
