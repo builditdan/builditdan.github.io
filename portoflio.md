@@ -2,11 +2,9 @@
 layout: page
 title: Portfolio
 ---
-<h4 style="color:red;"><center>Under construction</center></h4>
-On my portoflio page you can find information on projects that I have or are currently working on. I develop using Ruby on Rails, Javascript, HTML, CSS, jQuery, AngularJS, Wordpress, and various other technologies as needed. The majority of my work is stored in [Gitbub](https://github.com/builditdan) where I use the id **builditdan**.
+Here you can find information on projects that I have or are currently working on. I develop using Ruby on Rails, Javascript, HTML, CSS, jQuery, AngularJS, Wordpress, and various other technologies as needed. The majority of my work is stored in [Gitbub](https://github.com/builditdan) where I use the id **builditdan**.
 
 <br>
-
 
 [<img src="img/blocchat.png">](http://builditdan.github.io/bloc-jams/)<br>
 **Project Name:** Bloc Jams<br>
@@ -22,7 +20,6 @@ On my portoflio page you can find information on projects that I have or are cur
 **Info:** <a href="/projects/blocjams.html">/projects/blocjams.html</a><br>
 <div class="line-separator"></div>
 <br>
-
 
 [<img src="img/bloc-jams-angular.png">](https://bloc-jams-angular1.herokuapp.com/)<br>
 **Project Name:** Bloc Jams - AngularJS<br>
@@ -43,11 +40,24 @@ On my portoflio page you can find information on projects that I have or are cur
 
 [<img src="img/bookemdanno.png">](https://bookemdanno.herokuapp.com/)<br>
 **Project Name:** BookemDanno <br>
-**Description:** A RoR site I built during my [bloc.io](http://bloc.io) training for easily storing and sharing bookmarks<br>
+**Description:** A Ruby on Rails site I built during my [bloc.io](http://bloc.io) training for easily storing and sharing bookmarks<br>
 **Info:** <a href="/projects/bookemdanno.html">/projects/bookemdanno.html</a><br>
 <div class="line-separator"></div>
 <br>
 
+[<img src="img/bloccit.png">](https://peaceful-shore-6087.herokuapp.com/)<br>
+**Project Name:** Bloccit <br>
+**Description:** A Ruby on Rails Reddit clone that I built during my foundation training at [bloc.io](http://bloc.io)<br>
+**Info:** <a href="/projects/bloccit.html">/projects/bloccit.html</a><br>
+<div class="line-separator"></div>
+<br>
+
+[<img src="img/blocitoff.png">](http://blocitoffa.herokuapp.com/welcome/index)<br>
+**Project Name:** BlocItOff<br>
+**Description:** A Ruby on Rails task management application that I built during my training at [bloc.io](http://bloc.io)<br>
+**Info:** <a href="/projects/blocitoff.html">/projects/blocitoff.html</a><br>
+<div class="line-separator"></div>
+<br>
 
 [<img src="img/wikipad.png" >](https://wikipad1.herokuapp.com/)<br>
 **Project Name:** Wiki Pad <br>

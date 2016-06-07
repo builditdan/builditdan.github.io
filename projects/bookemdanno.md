@@ -43,6 +43,8 @@ I built this application during my Ruby on Rails training with [bloc.io](https:/
 
 It is a website that will help you manage your bookmarks. You can add them by topic and either enter them manually or email them to danny@app2bdc20b5d5664f50a03f2e8f7c61280a.mailgun.org. Bookmarks can be made public or private. They can be previewed and searched.
 
+<iframe src="//giphy.com/embed/mZcFEqnzutFFm" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/h50-scott-caan-alex-oloughlin-mZcFEqnzutFFm"></a></p>
+
 ### Design Information
 I used [bootstrap](http://getbootstrap.com/) to aide in design and layout. It is a responsive site and should work on mobile devices as well as computer screens.
 

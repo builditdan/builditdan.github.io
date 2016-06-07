@@ -5,7 +5,7 @@ hide: true
 ---
 
 ### URL
-[hhttps://wikipad1.herokuapp.com/](https://wikipad1.herokuapp.com/)
+[https://wikipad1.herokuapp.com/](https://wikipad1.herokuapp.com/)
 
 ### Github URL
 [https://github.com/builditdan/wikipad](https://github.com/builditdan/wikipad)
