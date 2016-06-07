@@ -8,19 +8,33 @@ On my portoflio page you can find information on projects that I have or are cur
 <br>
 
 
-
-
-[<img src="img/blocchat.png">](http://blocchat1.herokuapp.com/)<br>
-**Project Name:** Bloc Chat<br>
-**Description:** A AngularJS site I built during my [bloc.io](http://bloc.io) timing your activities using the Pomodoro Technique<br>
+[<img src="img/blocchat.png">](http://builditdan.github.io/bloc-jams/)<br>
+**Project Name:** Bloc Jams<br>
+**Description:** A Javascript site I built during my [bloc.io](http://bloc.io) training where users can create conversations and chat with other members.<br>
 **Info:** <a href="/projects/blocchat.html">/projects/blocchat.html</a><br>
+<div class="line-separator"></div>
+<br>
+
+
+[<img src="img/bloc-jams.png">](http://builditdan.github.io/bloc-jams/index.html)<br>
+**Project Name:** Bloc Jams<br>
+**Description:** A demo of a music site I built during my [bloc.io](http://bloc.io) training using Javascript.<br>
+**Info:** <a href="/projects/blocjams.html">/projects/blocjams.html</a><br>
+<div class="line-separator"></div>
+<br>
+
+
+[<img src="img/bloc-jams-angular.png">](https://bloc-jams-angular1.herokuapp.com/)<br>
+**Project Name:** Bloc Jams - AngularJS<br>
+**Description:** A demo of a music site that I refactored during my [bloc.io](http://bloc.io) training to use Angular.<br>
+**Info:** <a href="/projects/blocjamsangular.html">/projects/blocjamsangular.html</a><br>
 <div class="line-separator"></div>
 <br>
 
 
 [<img src="img/apomodoro.png">](http://apomodoro.herokuapp.com/)<br>
 **Project Name:** Another Pomodoro Timer <br>
-**Description:** A AngularJS site I built during my [bloc.io](http://bloc.io) timing your activities using the Pomodoro Technique<br>
+**Description:** A AngularJS site I built during my [bloc.io](http://bloc.io) training that times tasks using the Pomodoro Technique<br>
 **Info:** <a href="/projects/apomodoro.html">/projects/apomodoro.html</a><br>
 <div class="line-separator"></div>
 <br>

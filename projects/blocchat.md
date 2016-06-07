@@ -4,7 +4,7 @@ title: Bloc Chat
 hide: true
 ---
 ### URL
-[https://blocchat1.herokuapp.com/](https://apomodoro.herokuapp.com/)
+[https://blocchat1.herokuapp.com/](https://blocchat1.herokuapp.com/)
 
 ### Github URL
 [https://github.com/builditdan/bloc-chat](https://github.com/builditdan/bloc-chat)
@@ -40,12 +40,12 @@ This project uses AngularJS and Google's [Firebase](https://firebase.google.com/
 My biggest challenge in this project was getting a better understanding how to use a [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database system like Firebase. This project required me to store not only my conversations but also the chats associated with them. I needed a relationship (foreign key) between those two tables. NoSQL is not a relational database so the whole concept of tables, fields, relationships, schemas, and indexes is different. Once my mind embraced the core concept that the document store (the database in a sense) is really just a series of [JSON](https://en.wikipedia.org/wiki/JSON) objects with children and nodes it started to make since. Not all NoSQL databases you JSON - others include [XML](https://en.wikipedia.org/wiki/XML), [YAML](https://en.wikipedia.org/wiki/YAML), etc.
 
 ### Highlights on scripts included
-* [Angular](http://angular-ui.github.io/) for development
-* [Firebase](https://firebase.google.com/docs/) for storing tasks
-* [UI Router](https://github.com/angular-ui/ui-router) for angular routing
-* [Bootbox](https://github.com/makeusabrew/bootbox) for showing nice popup boxes
-* [Datejs](https://github.com/datejs/Datejs) date library
-* [Angular Cookie helper](https://docs.angularjs.org/api/ngCookies) cookie helper for storing username
+* [`Angular`](http://angular-ui.github.io/) for development
+* [`Firebase`](https://firebase.google.com/docs/) for storing tasks
+* [`UI Router`](https://github.com/angular-ui/ui-router) for angular routing
+* [`Bootbox`](https://github.com/makeusabrew/bootbox) for showing nice popup boxes
+* [`Datejs`](https://github.com/datejs/Datejs) date library
+* [`Angular Cookie helper`](https://docs.angularjs.org/api/ngCookies) cookie helper for storing username
 
 
 ### Additional comments
