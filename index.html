@@ -1,15 +1,25 @@
 ---
 layout: default
 ---
+<script>
+    $(document).ready(function() {
+      
+      $(".site-nav").delay(2500).effect('shake', {times:3}, 1000);
 
+      });
+  </script>
 <div class="home">
+  
   {% if site.theme.header_text %}
-  <div class="call-out" 
-  style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
+ 
+  <div class="call-out" data-parallax="scroll" data-image-src="img/background2.jpg">
     {{ site.theme.header_text }}
+    
   </div>
+
   {% endif %}
 
+  
   <div class="posts">
     {% for post in paginator.posts %}
     <div class="post-teaser">
@@ -50,3 +60,4 @@ layout: default
   </div>
   {% endif %}
 </div>
+

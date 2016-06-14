@@ -3,15 +3,19 @@
   @extend %padding-regular;
   display: inline-block;
   width: 100%;
-  background-color:$header-desc-background-color;
+//  background-color:$header-desc-background-color;
   background-size: cover;
   font-size: 1.2em;
   text-align: center;
   color: $header-desc-text-color;
+  margin-top: 100px;
+  padding-bottom: 150px;
+ 
 }
 .call-out p:last-child {
   margin-bottom: 0;
 }
+
 // Post listing
 .posts {
   .post-teaser {
