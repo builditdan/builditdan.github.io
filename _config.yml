@@ -18,7 +18,7 @@ theme:
   #   <br>
   # <h4>You can find my portfolio page <a style="color:orange;" href="portoflio.html">here<a></h4>
   # header_text_feature_image: img/blue.jpeg
-  
+
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
 
@@ -45,7 +45,7 @@ theme:
   youtube:
 
   # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-79708705-1" # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname:
   katex: true # Enable if using math markup
 
