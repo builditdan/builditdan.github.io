@@ -2,6 +2,8 @@
 layout: page
 title: Bloc Chat
 hide: true
+feature-img: "/img/bannera.jpg"
+
 ---
 ### URL
 [https://blocchat1.herokuapp.com/](https://blocchat1.herokuapp.com/)

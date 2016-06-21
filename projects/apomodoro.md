@@ -2,6 +2,8 @@
 layout: page
 title: Another Pomodoro Timer
 hide: true
+feature-img: "/img/bannera.jpg"
+
 ---
 ### URL
 [https://apomodoro.herokuapp.com/](https://apomodoro.herokuapp.com/)

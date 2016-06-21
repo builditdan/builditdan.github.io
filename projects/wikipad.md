@@ -2,6 +2,7 @@
 layout: page
 title: Wiki Pad
 hide: true
+feature-img: "/img/bannera.jpg"
 ---
 
 ### URL

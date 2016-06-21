@@ -2,6 +2,8 @@
 layout: page
 title: BlocItOff
 hide: true
+feature-img: "/img/bannera.jpg"
+
 ---
 
 ### URL

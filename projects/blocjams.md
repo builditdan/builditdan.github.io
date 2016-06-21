@@ -2,6 +2,8 @@
 layout: page
 title: Bloc Jams
 hide: true
+feature-img: "/img/bannera.jpg"
+
 ---
 ### URL
 [http://builditdan.github.io/bloc-jams/](http://builditdan.github.io/bloc-jams/)

@@ -2,6 +2,8 @@
 layout: page
 title: Bloc Jams AngularJS
 hide: true
+feature-img: "/img/bannera.jpg"
+
 ---
 ### URL
 [https://bloc-jams-angular1.herokuapp.com/](https://bloc-jams-angular1.herokuapp.com/)

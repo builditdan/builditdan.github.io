@@ -2,6 +2,8 @@
 layout: page
 title: Bloccit
 hide: true
+feature-img: "/img/bannera.jpg"
+
 ---
 
 ### URL

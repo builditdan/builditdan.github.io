@@ -2,6 +2,7 @@
 layout: page
 title: BookemDanno
 hide: true
+feature-img: "/img/bannera.jpg"
 ---
 
 ### URL

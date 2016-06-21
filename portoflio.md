@@ -13,8 +13,9 @@ Here you can find information on projects that I have or are currently working o
 <br>
 
 <div class="wow bounceInUp portfolio-background">
-  <a href="http://builditdan.github.io/projects/blocchat.html"><img src="img/blocchat.png" ></a><br>
-  <strong>Project Name:</strong>Bloc Chat Application  <br>
+  <a href="https://blocchat1.herokuapp.com/"><img src="img/blocchat.png" ></a><br>
+
+  <strong>Project Name:</strong> Bloc Chat Application  <br>
   <strong>Description:</strong>  A Javascript site I built during my [bloc.io](http://bloc.io) training where users can create conversations and chat with other members.<br>
   <strong>Info:</strong> <a href="/projects/blocchat.html">/projects/blocchat.html</a><br>
   <br>
@@ -23,7 +24,7 @@ Here you can find information on projects that I have or are currently working o
 
 <div class="wow bounceInUp portfolio-background">
   <a href="http://builditdan.github.io/bloc-jams/index.html"><img src="img/bloc-jams.png" ></a><br>
-  <strong>Project Name:</strong>Bloc Jams  <br>
+  <strong>Project Name:</strong> Bloc Jams  <br>
   <strong>Description:</strong>  A demo of a music site I built during my foundation training at bloc using Javascript.<br>
   <strong>Info:</strong> <a href="/projects/blocjams.html">/projects/blocjams.html</a><br>
   <br>
