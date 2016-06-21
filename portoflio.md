@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Portfolio
+feature-img: "img/bannera.jpg"
 ---
 
 <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
@@ -124,5 +125,3 @@ Here you can find information on projects that I have or are currently working o
   <strong>Info:</strong> <a href="http://daniels111.blogspot.com/">http://daniels111.blogspot.com/</a> <br>
   <br>
 </div>
-
-

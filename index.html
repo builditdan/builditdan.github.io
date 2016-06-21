@@ -3,23 +3,23 @@ layout: default
 ---
 <script>
     $(document).ready(function() {
-      
+
       $(".site-nav").delay(2500).effect('shake', {times:3}, 1000);
 
       });
   </script>
 <div class="home">
-  
+
   {% if site.theme.header_text %}
- 
-  <div class="call-out" data-parallax="scroll" data-image-src="img/background2.jpg">
+
+  <div class="call-out" data-parallax="scroll" data-image-src="img/bannera.jpg">
     {{ site.theme.header_text }}
-    
+
   </div>
 
   {% endif %}
 
-  
+
   <div class="posts">
     {% for post in paginator.posts %}
     <div class="post-teaser">
@@ -60,4 +60,3 @@ layout: default
   </div>
   {% endif %}
 </div>
-
