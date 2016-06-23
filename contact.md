@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact Me
-feature-img: "/img/bannera.jpg"
+feature-img: "img/bannera.jpg"
 ---
 
 <!-- CSS -->
