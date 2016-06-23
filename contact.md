@@ -22,7 +22,7 @@ function validateForm( form )
 </script>
 
 <form action="https://getsimpleform.com/messages?form_api_token=a40fe9a3a332c4ccb89ae70732486336" method="post" onSubmit="return validateForm( this );">
-  <! use this one for testing <input type='hidden' name='redirect_to' value='http://localhost:4000/thank-you.html' /> -->
+  <!-- use this one for testing <input type='hidden' name='redirect_to' value='http://localhost:4000/thank-you.html' /> -->
   <input type='hidden' name='redirect_to' value='http://builditdan.github.io/thank-you.html' />
 
 
