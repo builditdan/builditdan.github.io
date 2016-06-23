@@ -1,54 +1,19 @@
 
-p {
-	margin-bottom: 15px;
-}
-
-#not-used-page-wrap {
-	min-width: 400px;
-	background: lightgray;
-	padding: 20px 50px 20px 50px;
-	margin: 20px auto;
-
-	height: auto !important;
-	min-height: : 400px;
-	min-width: 700px;
-	border-radius: 25px;
-	background-image: url("/img/contact_box.jpg");
-	background-size:cover;
-	box-shadow: 10px 10px grey;
-}
-
-#contact-area {
-	width: 600px;
-	margin-top: 5px;
-}
-
 #contact-area input, #contact-area textarea {
-	padding: 5px;
-	width: 471px;
-	margin: 0px 0px 10px 0px;
 	border: 2px solid #ccc;
+	width:100%;
+	max-width: 500px;
+
 }
 
-#contact-area textarea {
-	height: 90px;
-}
 
 #contact-area textarea:focus, #contact-area input:focus {
 	border: 2px solid #900;
+
 }
 
 #contact-area input.submit-button {
 	margin-top: 25px;
 	width: 250px;
 	float: left;
-}
-
-label {
-	float: left;
-	text-align: right;
-	margin-right: 15px;
-	width: 100px;
-	padding-top: 5px;
-
 }

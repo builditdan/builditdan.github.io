@@ -4,9 +4,6 @@ title: Contact Me
 feature-img: "img/bannera.jpg"
 ---
 
-<!-- CSS -->
-<link rel="stylesheet" href="/css/contact.css">
-
 <script>
 function validateForm( form )
 {
@@ -26,8 +23,6 @@ function validateForm( form )
   <input type='hidden' name='redirect_to' value='http://builditdan.github.io/thank-you.html' />
 
 
-  <div id="page-wrap">
-
 		<h2>Contact Form</h2>
 		<p>I am looking forward to hearing from you. You have some fields and button below so you know what to do!</p>
 
@@ -35,14 +30,14 @@ function validateForm( form )
 
 			<form method="post" >
       <!-- <form method="post" action="contactengine.php"> -->
-				<label for="Name">Name:</label>
-				<input type="text" name="Name" id="Name" />
+				<label for="Name">Name:</label><br>
+				<input type="text" name="Name" id="Name" /><br><br>
 
-				<label for="Email">Email:</label>
-				<input type="text" name="Email" id="Email" />
+				<label for="Email">Email:</label><br>
+				<input type="text" name="Email" id="Email" /><br><br>
 
-				<label for="Message">Message:</label><br />
-				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+				<label for="Message">Message:</label><br>
+				<textarea name="Message" id="Message"></textarea><br>
 
 				<input type="submit" name="submit" value="Submit" class="submit-button" />
 			</form>
@@ -50,8 +45,6 @@ function validateForm( form )
 			<div style="clear: both;"></div>
 
 		</div>
-
-	</div>
 
 
 </form>
