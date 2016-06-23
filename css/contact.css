@@ -3,7 +3,7 @@ p {
 	margin-bottom: 15px;
 }
 
-#page-wrap {
+#not-used-page-wrap {
 	min-width: 400px;
 	background: lightgray;
 	padding: 20px 50px 20px 50px;
@@ -16,8 +16,6 @@ p {
 	background-image: url("/img/contact_box.jpg");
 	background-size:cover;
 	box-shadow: 10px 10px grey;
-
-
 }
 
 #contact-area {
