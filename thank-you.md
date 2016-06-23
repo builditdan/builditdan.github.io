@@ -5,10 +5,14 @@ hide: true
 feature-img: "img/bannera.jpg"
 ---
 
+
+
 <script>
+
 $(document).ready(function() {
 
   $("#quote-it").effect('fade', 3000);
+
 
 
 });

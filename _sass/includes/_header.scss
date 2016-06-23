@@ -6,7 +6,7 @@
   float: left;
   width: 100%;
   position: fixed;
-
+  z-index: 100;
   a {
     color: $header-link-color;
   }

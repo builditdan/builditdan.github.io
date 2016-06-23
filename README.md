@@ -1,6 +1,6 @@
 # BuilditDan's blog
 
-Hi!, my name is Dan and I am software engineer with experience in web and application development including project management. This is the source to my blog. I used [Jekyll](http://jekyllrb.com/) and a theme called [Type](https://rohanchandra.github.io/project/type/) to build this site. It is hosted using [Github pages](https://pages.github.com/).
+My name is Dan and I am software engineer with experience in web and application development including project management. This is the source to my blog. I used [Jekyll](http://jekyllrb.com/) and a theme called [Type](https://rohanchandra.github.io/project/type/) to build this site. It is hosted using [Github pages](https://pages.github.com/).
 
 ### Getting Started
 

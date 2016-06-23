@@ -4,17 +4,18 @@ p {
 }
 
 #page-wrap {
-	width: 700px;
+	min-width: 400px;
 	background: lightgray;
 	padding: 20px 50px 20px 50px;
 	margin: 20px auto;
-	min-height: 500px;
+
 	height: auto !important;
-	height: 500px;
+	min-height: : 400px;
+	min-width: 700px;
 	border-radius: 25px;
 	background-image: url("/img/contact_box.jpg");
 	background-size:cover;
-	xbox-shadow: 10px 10px grey;
+	box-shadow: 10px 10px grey;
 
 
 }
@@ -40,8 +41,9 @@ p {
 }
 
 #contact-area input.submit-button {
-	width: 100px;
-	float: right;
+	margin-top: 25px;
+	width: 250px;
+	float: left;
 }
 
 label {
