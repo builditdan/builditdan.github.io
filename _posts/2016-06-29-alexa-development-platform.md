@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Alexa Skills (Wordsmith Trivia & Political Geek)
+title: Alexa Skills
 ---
 
 As part of my full stack training with [bloc.io](bloc.io), I completed two Alexa skills. Both have been accepted by Amazon. The first one is called [Wordsmith Trivia](https://github.com/dale3h/alexa-skills-list/tree/master/skills/B01G91DCFI) and the other is [Political Geek](https://github.com/builditdan/politicalgeek). For both of these, I followed the Amazon provided templates on [Github](https://github.com/amzn/alexa-skills-kit-js). I used [Space Geek](https://github.com/amzn/alexa-skills-kit-js/tree/master/samples/spaceGeek) for Political Geek. In a [previous post](http://builditdan.github.io/2016/05/27/alexa-development-platform.html) I discussed what I did for Wordsmith Trivia.
