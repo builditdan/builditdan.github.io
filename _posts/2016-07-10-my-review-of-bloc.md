@@ -22,7 +22,7 @@ John was a great cheerleader. He made me feel confident in what I was learning a
 
 If you are looking for a mentor, I highly recommend Jon and John.
 
-<iframe src="//giphy.com/embed/l3E6z6QxD2uKoRTDq" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/siliconvalleyhbo-l3E6z6QxD2uKoRTDq"></a></p>
+<img src="http://i.giphy.com/l3E6z6QxD2uKoRTDq.gif" style="width:480px;height:270px;">
 
 Bloc’s online tutorials were excellent. Many times, I could have sworn something was wrong with the tutorial and came to realize I missed something. I believe these tutorials have improved over the past few years after speaking with previous graduates.
 
