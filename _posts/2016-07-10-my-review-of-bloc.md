@@ -22,6 +22,8 @@ John was a great cheerleader. He made me feel confident in what I was learning a
 
 If you are looking for a mentor, I highly recommend Jon and John.
 
+<iframe src="//giphy.com/embed/l3E6z6QxD2uKoRTDq" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/siliconvalleyhbo-l3E6z6QxD2uKoRTDq"></a></p>
+
 Bloc’s online tutorials were excellent. Many times, I could have sworn something was wrong with the tutorial and came to realize I missed something. I believe these tutorials have improved over the past few years after speaking with previous graduates.
 
 Each track started with the basics of the lessons, followed by a complete walk-through of how to build an online application. For RoR it was a Reddit clone and Javascript was an online music player. Much of this training was typing in code into your local development platform and running your tests from there. Next up, you pick several projects they recommend to develop with some general guidance. Creating a capstone project is part of the curriculum, as well as job preparation tutorials. The Bloc mentors conduct mock technical interviews which helped me get comfortable with using tools like CodePen or JSBin to write sample code on demand during a video interview session.
