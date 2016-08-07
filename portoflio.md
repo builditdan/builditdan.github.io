@@ -4,7 +4,7 @@ title: Portfolio
 feature-img: "img/bannera.jpg"
 ---
 
-<link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+<link rel="stylesheet" href="css/animate.css">
 <script src="js/wow.min.js"></script>
 <script>new WOW().init();</script>
 
@@ -96,9 +96,9 @@ Here you can find information on projects that I have or are currently working o
 
 <div class="wow bounceInUp portfolio-background">
   <a href="http://rareresearchsolutions.com/mrsouthtampa/"><img src="img/mrsouthtampa.png" ></a><br>
-  <strong>Mr. South Tampa:</strong> F1Dan  <br>
-  <strong>Description:</strong> A Wordpress site I built for my brother's real estate business (not live yet) <br>.<br>
-  <strong>Info:</strong> <a   href="http://rareresearchsolutions.com/mrsouthtampa/">http://rareresearchsolutions.com/mrsouthtampa/</a> <br>
+  <strong>Project Name:</strong> Mr. South Tampa<br>
+  <strong>Description:</strong> A Wordpress site I built for a real estate business professional in Tampa.<br>
+  <strong>Info:</strong> <a href="http://mrsouthtampa.com">http://mrsouthtampa.com</a> <br>
   <br>
 </div>
 
