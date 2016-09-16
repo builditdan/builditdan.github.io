@@ -95,7 +95,7 @@ Here you can find information on projects that I have or are currently working o
 
 
 <div class="wow bounceInUp portfolio-background">
-  <a href="http://mrsouthtampa/"><img src="img/mrsouthtampa.png" ></a><br>
+  <a href="http://mrsouthtampa.com"><img src="img/mrsouthtampa.png" ></a><br>
   <strong>Project Name:</strong> Mr. South Tampa<br>
   <strong>Description:</strong> A Wordpress site I built for a real estate business professional in Tampa.<br>
   <strong>Info:</strong> <a href="http://mrsouthtampa.com">http://mrsouthtampa.com</a> <br>
