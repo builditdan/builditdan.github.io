@@ -14,10 +14,10 @@ Here you can find information on projects that I have or are currently working o
 <br>
 
 <div class="wow bounceInUp portfolio-background">
-  <a href="https://myplaceiq.herokuapp.com/"><img src="img/myplaceiq.png" ></a><br>
-  <strong>Project Name:</strong> MyPlaceIQ  <br>
-  <strong>Description:</strong> A Ruby on Rails prototype site I built to help realtors and consumers find their ideal neighborhood.<br>
-  <strong>Info:</strong> <a href="https://myplaceiq.herokuapp.com/aboutus/index">https://myplaceiq.herokuapp.com/aboutus/index</a> <br>
+  <a href="https://myplaceiq.herokuapp.com/"><img src="img/nextmoveiq.png" ></a><br>
+  <strong>Project Name:</strong> NextMoveIQ  <br>
+  <strong>Description:</strong> A Ruby on Rails site I built to help realtors and consumers find their ideal neighborhood.<br>
+  <strong>Info:</strong> <a href="http://nextmoveiq.com">http://nextmoveiq.com</a> <br>
   <br>
 </div>
 
