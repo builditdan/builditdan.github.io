@@ -40,7 +40,7 @@ rails s
 ```
 
 ### Background and General Information
-I built this application during my Ruby on Rails training with [bloc.io](https://bloc.io).
+This is a sample Ruby on Rails application for saving bookmarks.
 
 It is a website that will help you manage your bookmarks. You can add them by topic and either enter them manually or email them to danny@app2bdc20b5d5664f50a03f2e8f7c61280a.mailgun.org. Bookmarks can be made public or private. They can be previewed and searched.
 

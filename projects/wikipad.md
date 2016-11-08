@@ -40,7 +40,7 @@ rails s
 ```
 
 ### Background and General Information
-I built this application during my Ruby on Rails training with [bloc.io](https://bloc.io).
+This is a demo application that uses Ruby on Rails for creating wikis.
 
 It is a website that will allow users to be authenticated and create public and private Wikis. You can add collaborators so others can update your wiki and use markdown for creating the content.
 

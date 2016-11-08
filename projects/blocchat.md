@@ -32,7 +32,7 @@ The default task runs a simple server on port 3000. To view it in a any browser,
 >Note that unless the application is run [via Live Preview in Brackets](#use-in-brackets-live-preview), the browser will need to be refreshed to view the most recent changes.
 
 ### Background and General Information
-I built this Angular JavaScript site during my front-end training with [bloc.io](https://bloc.io).
+This is a sample Angular JavaScript site.
 
 It is a single page website where you can create conversations and chat with other users. No login is required but you are requested to enter your username each time you visit the website.
 

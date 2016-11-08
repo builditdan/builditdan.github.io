@@ -33,8 +33,6 @@ The default task runs a simple server on port 3000. To view it in a any browser,
 
 
 ### Background and General Information
-I built this JavaScript site during my front-end training with [bloc.io](https://bloc.io).
-
 It is a single page website that will help you manage your time using the [Pomodoro Technique](http://pomodorotechnique.com/) .  You can time your events and record your tasks.  The timer has the following sequences:
 
 > 25min session -> 5min break -> 25min session -> 5min break -> 25min session -> 5min break -> 25min session -> 15min break -> START OVER

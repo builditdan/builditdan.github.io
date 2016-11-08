@@ -15,9 +15,9 @@ theme_settings:
      <h3>I'm Dan, a software engineer with experience in web and application development including project management.
      </h3>
      <h4 class="fade-in"><br>You can find my portfolio page <a style="color:orange;" href="portoflio.html">here</a></h4>
-  #   <br>
-  # <h4>You can find my portfolio page <a style="color:orange;" href="portoflio.html">here<a></h4>
-  # header_text_feature_image: img/blue.jpeg
+     <br>
+   <h4>You can find my portfolio page <a style="color:orange;" href="portoflio.html">here<a></h4>
+   header_text_feature_image: img/blue.jpeg
 
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>

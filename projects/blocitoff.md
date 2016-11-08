@@ -41,7 +41,7 @@ rails s
 ```
 
 ### Background and General Information
-I built this application during my Ruby on Rails training with [bloc.io](https://bloc.io).
+This sample application uses Ruby on Rails.
 
 It is a website where you can enter tasks and they will automatically self-destruct in 7 days. By automatically deleting the tasks it provides you that motivation to get your tasks done before they expire.
 

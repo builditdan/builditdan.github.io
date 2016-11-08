@@ -32,7 +32,7 @@ The default task runs a simple server on port 3000. To view it in a any browser,
 >Note that unless the application is run [via Live Preview in Brackets](#use-in-brackets-live-preview), the browser will need to be refreshed to view the most recent changes.
 
 ### Background and General Information
-This is a demo music site that I refactored to use AngularJS during my front-end training with [bloc.io](https://bloc.io).
+This is a demo music site that I refactored to use AngularJS.
 
 ### Design Information
 This project uses AngularJS and the [Buzz](http://buzz.jaysalvat.com/) library to play music. It is a demo site only. It is a responsive site and responds with popup imagery on the home page as you scroll down. It has music controls and a play bar that responds when clicked. It is a good example where controllers, services, and directives are used.

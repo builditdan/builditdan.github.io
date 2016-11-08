@@ -1,8 +1,8 @@
 ---
 layout: post
-title: My Capstone Project
+title: MyPlaceIQ.com
 ---
-I just brought the first iteration my capstone project live. The site is called [MyPlaceIQ](https://myplaceiq.herokuapp.com/). I developed it during a recent full stack web development training course at [Bloc](https://www.bloc.io/). I wanted to learn more about web development by building a real application. I built MyPlaceIQ because I saw an opportunity to help realtors and consumers with a problem they face. Possible one they did not even think was a problem.
+I just brought the first iteration of my project live. The site is called [MyPlaceIQ](https://myplaceiq.herokuapp.com/). I wanted to learn more about RoR development by building a real application. I built MyPlaceIQ because I saw an opportunity to help realtors and consumers with a problem they face. Possible one they did not even think was a problem.
 
 That is - we live in neighborhoods not just homes or cities or states. Many real estate search sites start with a blank search box where you type in a state, city, address, or even a neighborhood. But what if you don't know that answer yet. That is where MyPlaceIQ comes in. I wanted to start with a series of intelligent questions that would help get those answers for you. My top level questions help you find the state and then it is a matter of browsing the cities until you find one that interests you. Reviewing the provided information about each state and city. Once you have found a city you can view all of it's respective neighborhoods and start your own research.
 

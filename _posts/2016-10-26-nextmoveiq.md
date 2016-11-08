@@ -3,7 +3,7 @@ layout: post
 title: NextMoveIQ.com is live!
 ---
 
-I changed a few things on my capstone project including it’s name. It is now called NextMoveIQ located at [http://www.nextmoveiq.com/](http://www.nextmoveiq.com/). I did this based on some great feedback I received from the [Bloc Hacker Club](https://www.facebook.com/groups/blocalumni/) on Facebook.
+I changed a few things on neighborhood match site including it’s name. It is now called NextMoveIQ located at [http://www.nextmoveiq.com/](http://www.nextmoveiq.com/). I did this based on some great feedback I received from the [Bloc Hacker Club](https://www.facebook.com/groups/blocalumni/) on Facebook.
 
 I redesigned the way the questions are presented. I condensed all the questions into a single page that leads the user through each question. It does this by first disabling all but the first question on state. It then enables the next question as each answer is provided. I used Javascript/jQuery in Rails to accomplish this. It required allot of event detection. Including handling if the user switches the state or city then other fields would have to respond or reset appropriately.
 
