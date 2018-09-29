@@ -42,14 +42,6 @@ Here you can find information on projects that I have or are currently working o
 </div>
 
 <div class="wow bounceInUp portfolio-background">
-  <a href="http://www.f1dan.com/"><img src="img/f1dan.png" ></a><br>
-  <strong>Project Name:</strong> F1Dan  <br>
-  <strong>Description:</strong> A site where I have posted about keyboards and other stuff.<br>
-  <strong>Info:</strong> <a href="http://www.f1dan.com/">http://www.f1dan.com/</a> <br>
-  <br>
-</div>
-
-<div class="wow bounceInUp portfolio-background">
   <a href="http://www.whattostream.com/"><img src="img/whattostream.png" ></a><br>
   <strong>Project Name:</strong> What to Stream  <br>
   <strong>Description:</strong> A Wordpress site with a little custom PHP for searching for movies (I plan to rebuild this site using Javascript and AngularJS.<br>
