@@ -6,8 +6,7 @@ feature-img: "img/bannera.jpg"
 
 
 <link rel="stylesheet" href="css/animate.css">
-<script src="js/wow.min.js"></script>
-<script>new WOW().init();</script>
+
 
 Here you can find information on projects that I have or are currently working on. I develop using Ruby on Rails, Javascript, HTML, CSS, jQuery, AngularJS, Wordpress, and various other technologies as needed. The majority of my work is stored in [Gitbub](https://github.com/builditdan) where I use the id **builditdan**.
 
