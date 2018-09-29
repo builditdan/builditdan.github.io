@@ -42,90 +42,9 @@ Here you can find information on projects that I have or are currently working o
 </div>
 
 <div class="wow bounceInUp portfolio-background">
-  <a href="http://www.f1dan.com/"><img src="img/f1dan.png" ></a><br>
-  <strong>Project Name:</strong> F1Dan  <br>
-  <strong>Description:</strong> A site where I have posted about keyboards and other stuff.<br>
-  <strong>Info:</strong> <a href="http://www.f1dan.com/">http://www.f1dan.com/</a> <br>
-  <br>
-</div>
-
-<div class="wow bounceInUp portfolio-background">
   <a href="http://www.whattostream.com/"><img src="img/whattostream.png" ></a><br>
   <strong>Project Name:</strong> What to Stream  <br>
   <strong>Description:</strong> A Wordpress site with a little custom PHP for searching for movies (I plan to rebuild this site using Javascript and AngularJS.<br>
   <strong>Info:</strong> <a href="http://www.whattostream.com/">http://www.whattostream.com/</a> <br>
-  <br>
-</div>
-
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="https://blocchat1.herokuapp.com/"><img src="img/blocchat.png" ></a><br>
-
-  <strong>Project Name:</strong> Bloc Chat Application  <br>
-  <strong>Description:</strong>  A demo Javascript site I built where users can create conversations and chat with other members.<br>
-  <strong>Info:</strong> <a href="/projects/blocchat.html">/projects/blocchat.html</a><br>
-  <br>
-</div>
-
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="http://builditdan.github.io/bloc-jams/index.html"><img src="img/bloc-jams.png" ></a><br>
-  <strong>Project Name:</strong> Bloc Jams  <br>
-  <strong>Description:</strong>  A demo music site I built using Javascript.<br>
-  <strong>Info:</strong> <a href="/projects/blocjams.html">/projects/blocjams.html</a><br>
-  <br>
-</div>
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="https://bloc-jams-angular1.herokuapp.com/"><img src="img/bloc-jams-angular.png" ></a><br>
-  <strong>Project Name:</strong> Bloc Jams - AngularJS  <br>
-  <strong>Description:</strong>  A demo of a music site that I refactored to use Angular.<br>
-  <strong>Info:</strong> <a href="/projects/blocjamsangular.html">/projects/blocjamsangular.html</a><br>
-  <br>
-</div>
-
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="http://apomodoro.herokuapp.com/"><img src="img/apomodoro.png" ></a><br>
-  <strong>Project Name:</strong> Another Pomodoro Timer  <br>
-  <strong>Description:</strong> A demo AngularJS site I built that times tasks using the Pomodoro Technique.<br>
-  <strong>Info:</strong> <a href="/projects/apomodoro.html">/projects/apomodoro.html</a><br>
-  <br>
-</div>
-
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="https://bookemdanno.herokuapp.com/"><img src="img/bookemdanno.png" ></a><br>
-  <strong>Project Name:</strong> BookemDanno  <br>
-  <strong>Description:</strong> A Ruby on Rails site I built for easily storing and sharing bookmarks<br>
-  <strong>Info:</strong> <a href="/projects/bookemdanno.html">/projects/bookemdanno.html</a><br>
-  <br>
-</div>
-
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="https://peaceful-shore-6087.herokuapp.com/"><img src="img/bloccit.png" ></a><br>
-  <strong>Project Name:</strong> Bloccit  <br>
-  <strong>Description:</strong> A Ruby on Rails Reddit clone that I built to learn more about rails.<br>
-  <strong>Info:</strong> <a href="/projects/bloccit.html">/projects/bloccit.html</a><br>
-  <br>
-</div>
-
-
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="http://blocitoffa.herokuapp.com/welcome/index"><img src="img/blocitoff.png" ></a><br>
-  <strong>Project Name:</strong> BlocItOff  <br>
-  <strong>Description:</strong> A simple Ruby on Rails task management application.<br>
-  <strong>Info:</strong> <a href="/projects/blocitoff.html">/projects/blocitoff.html</a><br>
-  <br>
-</div>
-
-
-<div class="wow bounceInUp portfolio-background">
-  <a href="https://wikipad1.herokuapp.com/"><img src="img/wikipad.png" ></a><br>
-  <strong>Project Name:</strong> Wiki Pad  <br>
-  <strong>Description:</strong> A RoR site I built for creating and sharing wikis<br>
-  <strong>Info:</strong> <a href="/projects/wikipad.html">/projects/wikipad.html</a>
   <br>
 </div>
