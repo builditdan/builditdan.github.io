@@ -45,4 +45,4 @@ Change terms and definitions in `data/re-exam-cards-data.json` and commit; the a
 
 ## Disclaimer
 
-Study aid only. Not affiliated with any state real estate commission or exam provider. Definitions are AI-generated for general exam study and may differ in wording from your course or your state's law. Check your state's licensing materials for state-specific rules.
+Study aid only. Not affiliated with any state real estate commission or exam provider. Definitions are AI-generated with Claude for general exam study and may differ in wording from your course or your state's law. Check your state's licensing materials for state-specific rules.

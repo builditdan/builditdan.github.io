@@ -234,6 +234,7 @@ a.btn { text-decoration: none; color: var(--ink); display: inline-flex; align-it
 .field input, .field select, .field textarea { padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-2); font-size: 16px; }
 .field textarea { min-height: 120px; resize: vertical; font-family: var(--f-body); line-height: 1.45; }
 .form-note { margin: 0; font-size: 13px; color: var(--muted); font-family: var(--f-body); }
+.disclaimer { margin: 8px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12px; line-height: 1.5; color: var(--muted); text-align: center; text-wrap: pretty; }
 
 .toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; box-shadow: var(--shadow); max-width: calc(100% - 32px); z-index: 20; }
 
@@ -395,6 +396,8 @@ img { max-width: 100%; }
       <p class="form-note">Cards you add join the topic you pick and are saved in this browser. You can delete them from Browse.</p>
     </form>
   </section>
+
+  <p class="disclaimer">Study aid only. Not affiliated with the Georgia Real Estate Commission or any exam provider. Definitions are AI-generated with Claude; verify them against official course and exam materials.</p>
 </div>
 <div class="sheet-back" id="sheet" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
