@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dan · Software Engineer · BuildItDan</title>
+<meta name="description" content="Dan, software engineer and PMP: reliable, high-volume software systems, data migration and imaging pipelines, and AI-driven applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Agent Ahead type: Söhne for headings (paid font; Inter Tight stands in), Inter for body -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     BRAND TOKENS: Agent Ahead (see Shared/brand.md)
+     Navy #142B49 · Slate #A3B5CC · Mist #E9EDF2 · Paper #FAF8F5
+     ============================================================ */
+  :root {
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-head: "Söhne", "Inter Tight", "Inter", system-ui, sans-serif;
+
+    --navy: #142B49;
+    --slate: #A3B5CC;
+    --mist: #E9EDF2;
+    --paper: #FAF8F5;
+
+    --bg: var(--paper);
+    --surface: #FFFFFF;
+    --text: var(--navy);
+    --muted: #4A5B72;
+    --line: #DCE2EA;
+    --accent: var(--navy);
+    --accent-soft: var(--mist);
+    --accent-ink: var(--paper);
+    --hero-bg: var(--navy);
+    --hero-text: var(--paper);
+    --hero-sub: var(--slate);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0D1D33;
+      --surface: #142B49;
+      --text: #E9EDF2;
+      --muted: #A3B5CC;
+      --line: #23395A;
+      --accent: #A3B5CC;
+      --accent-soft: #1A3255;
+      --accent-ink: #142B49;
+      --hero-bg: #142B49;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0D1D33; --surface: #142B49; --text: #E9EDF2; --muted: #A3B5CC;
+    --line: #23395A; --accent: #A3B5CC; --accent-soft: #1A3255; --accent-ink: #142B49;
+    --hero-bg: #142B49;
+  }
+
+  /* ============================================================ */
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.65 var(--font-body);
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero { padding: 80px 0 64px; background: var(--hero-bg); color: var(--hero-text); }
+  .hero-grid { display: grid; grid-template-columns: 140px 1fr; gap: 36px; align-items: center; }
+  .hero img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--slate); }
+  .eyebrow { font: 500 14px/1.3 var(--font-head); letter-spacing: .14em; color: var(--hero-sub); text-transform: uppercase; margin: 0 0 14px; }
+  .brandline { display: flex; align-items: center; gap: 10px; }
+  .icon { width: 24px; height: 24px; flex: none; fill: none; stroke: var(--hero-sub); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .icon .screen { fill: var(--hero-bg); }
+  h1 { font: 700 clamp(36px, 7vw, 56px)/1.05 var(--font-head); margin: 0 0 16px; letter-spacing: .02em; text-transform: uppercase; }
+  .rule { width: 64px; height: 1px; background: var(--slate); margin: 0 0 18px; border: 0; }
+  .lede { font-size: 18px; color: var(--mist); margin: 0; max-width: 56ch; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .btn { display: inline-block; padding: 10px 18px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font: 600 14px/1.2 var(--font-head); letter-spacing: .06em; text-transform: uppercase; }
+  .btn:hover { border-color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .hero .btn { background: transparent; color: var(--paper); border-color: rgba(163,181,204,.5); }
+  .hero .btn:hover { border-color: var(--slate); }
+  .hero .btn.primary { background: var(--paper); color: var(--navy); border-color: var(--paper); }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  h2 { font: 600 15px/1.3 var(--font-head); margin: 0 0 22px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  p { margin: 0 0 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .stat b { display: block; font: 700 26px/1.2 var(--font-head); color: var(--text); }
+  .stat span { font-size: 14px; color: var(--muted); }
+
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .card h3 { font: 600 17px/1.35 var(--font-head); margin: 0 0 8px; }
+  .card p { font-size: 15.5px; color: var(--muted); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font: 500 14px/1 var(--font-body); background: var(--accent-soft); color: var(--text); padding: 9px 13px; border-radius: 6px; }
+
+  .approach { font-size: 19px; line-height: 1.6; max-width: 62ch; }
+  .domains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .domain { border-left: 3px solid var(--slate); padding: 4px 0 4px 16px; }
+  .domain h3 { font: 600 16px/1.35 var(--font-head); margin: 0 0 4px; }
+  .domain p { font-size: 15px; color: var(--muted); }
+
+  .builds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .build { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .build .shot { aspect-ratio: 4 / 3; background: var(--accent-soft); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--muted); font: 600 12px/1 var(--font-head); letter-spacing: .12em; text-transform: uppercase; }
+  .build .shot { position: relative; overflow: hidden; }
+  .build .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
+  .build .body { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .build h3 { font: 600 17px/1.35 var(--font-head); margin: 0; }
+  .build p { font-size: 15px; color: var(--muted); margin: 0; }
+  .build .meta { margin-top: auto; padding-top: 8px; font: 600 12px/1.4 var(--font-head); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  section.learning { background: var(--accent-soft); }
+  .learning .intro { max-width: 62ch; margin-bottom: 28px; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: step; }
+  .step { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; counter-increment: step; }
+  .step::before { content: "0" counter(step); display: block; font: 700 13px/1 var(--font-head); letter-spacing: .14em; color: var(--muted); margin-bottom: 12px; }
+  .step h3 { font: 600 17px/1.35 var(--font-head); margin: 0 0 8px; }
+  .step p { font-size: 15.5px; color: var(--muted); }
+  .learning .now { margin-top: 24px; font-size: 15.5px; }
+
+  .projects { list-style: none; margin: 0; padding: 0; }
+  .projects li { display: grid; grid-template-columns: 200px 1fr; gap: 20px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .projects li:first-child { border-top: 0; padding-top: 0; }
+  .projects b { font-weight: 600; }
+  .projects span { color: var(--muted); font-size: 15.5px; }
+
+  .writing { background: var(--navy); color: var(--paper); border-radius: 12px; padding: 32px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+  .writing p { margin: 0; max-width: 52ch; color: var(--mist); }
+  .writing h2 { margin-bottom: 10px; color: var(--slate); }
+  .wordmark { font: 700 24px/1.1 var(--font-head); letter-spacing: .08em; text-transform: uppercase; margin: 0 0 10px; color: var(--paper); }
+  .writing .btn.primary { background: var(--paper); color: var(--navy); border-color: var(--paper); }
+
+  footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 680px) {
+    .wrap { padding: 0 16px; }
+    header.hero { padding: 48px 0 36px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 20px; }
+    .hero img { width: 96px; height: 96px; }
+    .stats, .cards, .domains, .steps, .builds { grid-template-columns: 1fr; }
+    .projects li { grid-template-columns: 1fr; gap: 4px; }
+    .approach { font-size: 17px; }
+    .writing { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <img src="img/builditdan.jpg" alt="Dan holding a BuildItDan mug">
+    <div>
+      <p class="eyebrow brandline"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5.5" r="2.6"/><path d="M5.5 15.5c0-3.6 2.9-6.3 6.5-6.3s6.5 2.7 6.5 6.3"/><rect class="screen" x="5.5" y="12.5" width="13" height="7.5" rx="1"/><path d="M2.5 21h19"/></svg>BuildItDan</p>
+      <h1>Dan</h1>
+      <hr class="rule">
+      <p class="lede">Software engineer focused on performance, reliability, and automation, now applying AI to real-world workflows.</p>
+      <div class="links">
+        <a class="btn primary" href="https://www.linkedin.com/in/danielschutte">LinkedIn</a>
+        <a class="btn" href="https://github.com/builditdan">GitHub</a>
+        <a class="btn" href="https://agentahead.substack.com/">Agent Ahead</a>
+        <a class="btn" href="mailto:agentahead.ai@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>What I do</h2>
+      <p>I'm a software engineer and certified PMP with 20+ years in healthcare IT, data migration, and high-volume image processing. At InfoWerks, I design and optimize multi-threaded C# pipelines that convert pharmacy and EHR images and their metadata during large-scale platform migrations, processing workloads of over 3 million images.</p>
+      <p>The work centers on throughput, reliability, and automation, with HIPAA-compliant handling of patient and pharmacy data at every step.</p>
+      <p>Earlier in my career, I spent 15 years as IT Director at Catalina Marketing, leading a 30+ person team that supported a retail advertising network across 17,000+ sites, including direct-to-patient education delivered through the pharmacy.</p>
+      <div class="stats">
+        <div class="stat"><b>3M+</b><span>pharmacy and EHR images in a single migration</span></div>
+        <div class="stat"><b>20+ years</b><span>in software, healthcare IT, and project leadership</span></div>
+        <div class="stat"><b>30+</b><span>person IT organization led, onshore and offshore</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Focus areas</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Imaging pipelines</h3>
+          <p>Multi-threaded conversion pipelines in C#, built to move large image sets quickly and safely.</p>
+        </div>
+        <div class="card">
+          <h3>Data migration &amp; ETL</h3>
+          <p>Automated migration workflows in C#, PowerShell, BASH, and batch that move customer records and imaging data to new vendor platforms.</p>
+        </div>
+        <div class="card">
+          <h3>Healthcare data</h3>
+          <p>Pharmacy and EHR environments, with HIPAA-compliant handling of patient data throughout conversion and migration.</p>
+        </div>
+        <div class="card">
+          <h3>Engineering + project leadership</h3>
+          <p>PMP-certified, with experience leading IT teams and smart grid rollouts. I can design the system and also run the project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Tools</h2>
+      <div class="tags">
+        <span class="tag">C#</span>
+        <span class="tag">.NET</span>
+        <span class="tag">PowerShell</span>
+        <span class="tag">BASH</span>
+        <span class="tag">SQL</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">MS SQL Server</span>
+        <span class="tag">Microsoft Azure</span>
+        <span class="tag">Git</span>
+        <span class="tag">Ruby on Rails</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Windows Server</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Agile / Scrum</span>
+        <span class="tag">ETL &amp; data migration</span>
+        <span class="tag">OpenAI</span>
+        <span class="tag">Claude</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>My approach</h2>
+      <p class="approach">Throughout my career, I've focused on designing and building systems that capture, transform, and deliver critical information at the moment it creates the most value.</p>
+      <p class="approach">Whether working in healthcare technology, systems integration, or AI-driven applications, my goal has remained consistent: helping people make better decisions, simplifying complex workflows, and using technology to solve meaningful business problems.</p>
+    </div>
+  </section>
+
+  <section class="learning">
+    <div class="wrap">
+      <h2>Learning AI, applied to real estate</h2>
+      <p class="intro">I'm growing my AI skills the way I've always learned: by building real things and sharing what I learn as I go. Real estate is where I'm putting it to work. It's a field full of information, commitments, and follow-ups, and that's where AI can help most.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>Guiding AI with instructions</h3>
+          <p>Writing Markdown skill files that tell AI how to approach real estate scenarios, including when to ask before it answers. An early version is free on GitHub.</p>
+        </div>
+        <div class="step">
+          <h3>Building small tools fast</h3>
+          <p>Turning everyday problems into working apps with plain-language requests, like a flashcard app for real estate terms.</p>
+        </div>
+        <div class="step">
+          <h3>Building something bigger</h3>
+          <p>Developing RDA with Claude Code: a local-first desktop app that helps realtors keep track of clients, conversations, and follow-ups.</p>
+        </div>
+      </div>
+      <p class="now">Right now I'm studying for my Georgia real estate license, learning from working realtors, and writing up each experiment on <a href="https://agentahead.substack.com/">Agent Ahead</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Featured builds</h2>
+      <div class="builds">
+        <article class="build">
+          <div class="shot"><img src="img/rda-home.jpg" alt="RDA home screen showing reminders and recent workspaces"></div>
+          <div class="body">
+            <h3>Realtor Decision Assistant (RDA)</h3>
+            <p>A local-first desktop app for Mac and Windows that brings a realtor's conversations, documents, tasks, and reminders together, with AI helping surface what needs attention.</p>
+            <span class="meta">Private prototype · In development</span>
+          </div>
+        </article>
+        <article class="build">
+          <div class="shot"><img src="img/workout.jpg" alt="Workout app listing exercises with video thumbnails"></div>
+          <div class="body">
+            <h3>Workout app</h3>
+            <p>My trainer's routines in one place: 12 exercises, each with a link to a video showing how to do it correctly. Shareable, so a trainer can build lists for clients.</p>
+            <span class="meta">Claude Artifact · <!-- TODO: link -->Link coming soon</span>
+          </div>
+        </article>
+        <article class="build">
+          <div class="shot"><img src="img/flashcards.jpg" alt="Real estate exam flashcard app showing a study card and progress bar"></div>
+          <div class="body">
+            <h3>Real estate flashcards</h3>
+            <p>238 exam terms across topics like real property law and land use, with progress tracking, for my Georgia real estate license studies.</p>
+            <span class="meta">Claude Artifact · <!-- TODO: link -->Link coming soon</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>More projects</h2>
+      <ul class="projects">
+        <li><b>Pharmacist MedGuide Assistant</b><span>Imports FDA Medication Guides, indexes them locally, and answers questions against that content using a locally run AI model.</span></li>
+        <li><b>StayInIt</b><span>My first iPhone app, built with AI as a development partner.</span></li>
+        <li><b>NextMoveIQ</b><span>A Ruby on Rails web app for researching neighborhoods, built on U.S. Census data.</span></li>
+        <li><b>Alexa skills</b><span>Three voice apps for Amazon Echo, all accepted by Amazon: Wordsmith Trivia, Political Geek, and Fridge Storage Times Helper, which gives storage times for meats, fruits, and vegetables using Foodsafety.gov guidance.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="border-bottom:0">
+    <div class="wrap">
+      <div class="writing">
+        <div>
+          <h2>Writing</h2>
+          <p class="wordmark">Agent Ahead</p>
+          <p>I write about what I'm learning building with AI, with experiments, lessons, and a few surprises along the way.</p>
+        </div>
+        <a class="btn primary" href="https://agentahead.substack.com/">Read on Substack</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 BuildItDan</div>
+</footer>
+
+</body>
+</html>
