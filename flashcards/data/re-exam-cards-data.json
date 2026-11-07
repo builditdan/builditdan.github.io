@@ -1,0 +1,1269 @@
+{
+  "app": "Real Estate Exam Cards",
+  "format_version": 2,
+  "exported": "2026-11-04",
+  "notes": "topics[].cards[] is the built-in deck. Card ids are unique across ALL topics and must never be reused or renumbered; lists and progress point at them. lists is empty: each student builds their own.",
+  "topics": [
+    {
+      "id": "realprop",
+      "name": "Real Property & the Law",
+      "order": 0,
+      "cards": [
+        {
+          "id": "realprop-01",
+          "term": "Accession",
+          "def": "Acquiring title to additions to real property, such as fixtures attached to the land or soil added by accretion."
+        },
+        {
+          "id": "realprop-02",
+          "term": "Accretion",
+          "def": "Gradual increase in land from soil (alluvion) deposited by the natural action of water. The owner gains title to the new land."
+        },
+        {
+          "id": "realprop-03",
+          "term": "Air rights",
+          "def": "The right to use the open space above the surface of the land. Can be sold or leased separately from the surface."
+        },
+        {
+          "id": "realprop-04",
+          "term": "Annexation",
+          "def": "Turning personal property into real property by attaching it to the land, such as installing a furnace."
+        },
+        {
+          "id": "realprop-05",
+          "term": "Appurtenance",
+          "def": "A right, privilege, or improvement that belongs to the land and passes with it on sale, such as an easement, water rights, or a building."
+        },
+        {
+          "id": "realprop-06",
+          "term": "Area preference",
+          "def": "People's preference for a particular location; the most important economic characteristic of land. Also called situs."
+        },
+        {
+          "id": "realprop-07",
+          "term": "Avulsion",
+          "def": "Sudden loss or shift of land from natural forces such as a flood or a river changing course. The owner generally keeps title to the land moved."
+        },
+        {
+          "def": "The legal rights of ownership: possession, control, enjoyment, exclusion, and disposition.",
+          "id": "ownership-05",
+          "term": "Bundle of legal rights"
+        },
+        {
+          "id": "realprop-08",
+          "term": "Chattel",
+          "def": "Another word for personal property: movable items not attached to real estate."
+        },
+        {
+          "id": "realprop-09",
+          "term": "Emblements",
+          "def": "Annual crops produced by human labor (such as wheat or corn). Treated as personal property; a tenant farmer may return to harvest them after the tenancy ends."
+        },
+        {
+          "id": "realprop-10",
+          "term": "Erosion",
+          "def": "Gradual wearing away of land by water, wind, or ice. The owner loses title to the land washed away."
+        },
+        {
+          "def": "Personal property attached to real estate so that it becomes part of the real property. Courts weigh method of attachment, adaptation to the property, relationship of the parties, intention, and any agreement (MARIA).",
+          "id": "ownership-03",
+          "term": "Fixture"
+        },
+        {
+          "id": "realprop-11",
+          "term": "Improvement",
+          "def": "Any man-made addition that increases the land's value: a building or fence (improvement on the land), or streets and utilities (improvement to the land)."
+        },
+        {
+          "id": "realprop-12",
+          "term": "Land",
+          "def": "The earth's surface, extending down to the center of the earth and up to infinity, including natural things permanently attached such as trees and water."
+        },
+        {
+          "def": "Water rights of owners whose land borders large, non-flowing bodies of water such as lakes, seas, and oceans.",
+          "id": "realprop-24",
+          "term": "Littoral rights"
+        },
+        {
+          "id": "realprop-13",
+          "term": "Manufactured housing",
+          "def": "Factory-built homes. Personal property unless permanently attached to land, at which point they become real property."
+        },
+        {
+          "id": "realprop-14",
+          "term": "Nonhomogeneity",
+          "def": "No two parcels of land are exactly alike (uniqueness), a physical characteristic of land. It is why courts can order specific performance."
+        },
+        {
+          "def": "Movable items not attached to real estate, such as furniture. Also called personalty or chattels. Transferred with a bill of sale, not a deed.",
+          "id": "ownership-02",
+          "term": "Personal property"
+        },
+        {
+          "id": "realprop-15",
+          "term": "Prior appropriation",
+          "def": "A water rights doctrine, used mainly in dry western states, where the state controls water and grants the right to use it by permit to the first user for a beneficial purpose. Owning land along the water does not by itself give a right to use it."
+        },
+        {
+          "id": "realprop-16",
+          "term": "Real estate",
+          "def": "Land at, above, and below the earth's surface, plus all things permanently attached to it, whether natural or man-made."
+        },
+        {
+          "def": "Land, everything permanently attached to it, and the bundle of legal rights that come with owning it.",
+          "id": "ownership-01",
+          "term": "Real property"
+        },
+        {
+          "id": "realprop-17",
+          "term": "Reliction",
+          "def": "Gradual increase in land when water permanently recedes, exposing dry land. Also called dereliction. The owner gains title."
+        },
+        {
+          "def": "Water rights of owners whose land borders flowing water such as rivers and streams.",
+          "id": "realprop-23",
+          "term": "Riparian rights"
+        },
+        {
+          "id": "realprop-18",
+          "term": "Severance",
+          "def": "Turning real property into personal property by detaching it from the land, such as cutting down a tree or removing a fixture."
+        },
+        {
+          "id": "realprop-19",
+          "term": "Situs",
+          "def": "The location of a property and people's preference for it. Another term for area preference."
+        },
+        {
+          "id": "realprop-20",
+          "term": "Subsurface rights",
+          "def": "Rights to the natural resources below the surface, such as minerals, oil, and gas. Can be sold separately from the surface (for example, a mineral lease)."
+        },
+        {
+          "id": "realprop-21",
+          "term": "Surface rights",
+          "def": "Rights to use the surface of the land. Can be owned separately from air and subsurface rights."
+        },
+        {
+          "def": "An item a commercial tenant installs for business use. It stays the tenant's personal property and may be removed before the lease ends.",
+          "id": "ownership-04",
+          "term": "Trade fixture"
+        },
+        {
+          "id": "realprop-22",
+          "term": "Water rights",
+          "def": "Rights to use water near or on a property: riparian rights, littoral rights, and prior appropriation."
+        }
+      ]
+    },
+    {
+      "id": "ownership",
+      "name": "Ownership & Interests",
+      "order": 1,
+      "cards": [
+        {
+          "def": "The highest form of ownership: unlimited duration, freely transferable, and inheritable.",
+          "id": "ownership-06",
+          "term": "Fee simple absolute"
+        },
+        {
+          "def": "A fee estate that can be lost if a stated condition is broken or a stated event occurs (determinable, or subject to a condition subsequent).",
+          "id": "ownership-07",
+          "term": "Fee simple defeasible"
+        },
+        {
+          "def": "Ownership that lasts for the lifetime of a named person and ends at that person's death.",
+          "id": "ownership-08",
+          "term": "Life estate"
+        },
+        {
+          "def": "A life estate measured by the life of someone other than the life tenant.",
+          "id": "ownership-09",
+          "term": "Life estate pur autre vie"
+        },
+        {
+          "def": "A future interest held by a third party (the remainderman), who takes possession when a life estate ends.",
+          "id": "ownership-10",
+          "term": "Remainder interest"
+        },
+        {
+          "def": "Co-ownership with undivided interests that may be unequal. No right of survivorship: each owner's share passes to their heirs or devisees.",
+          "id": "ownership-11",
+          "term": "Tenancy in common"
+        },
+        {
+          "def": "Co-ownership with right of survivorship. Requires four unities: possession, interest, time, and title (PITT).",
+          "id": "ownership-12",
+          "term": "Joint tenancy"
+        },
+        {
+          "def": "When one co-owner dies, their interest passes automatically to the surviving co-owners rather than to heirs.",
+          "id": "ownership-13",
+          "term": "Right of survivorship"
+        },
+        {
+          "def": "Ownership by married spouses with right of survivorship, in states that recognize it. Neither spouse can sell or encumber their interest alone.",
+          "id": "ownership-14",
+          "term": "Tenancy by the entirety"
+        },
+        {
+          "def": "In community property states, property acquired during marriage is owned equally by both spouses. Property owned before marriage or received by gift or inheritance is separate property.",
+          "id": "ownership-15",
+          "term": "Community property"
+        },
+        {
+          "def": "Fee ownership of an individual unit's airspace plus an undivided interest in the common elements.",
+          "id": "ownership-16",
+          "term": "Condominium"
+        },
+        {
+          "def": "Residents own shares in a corporation that owns the building and receive a proprietary lease to their unit.",
+          "id": "ownership-17",
+          "term": "Cooperative"
+        },
+        {
+          "def": "A right to use another person's land for a specific purpose without owning it.",
+          "id": "ownership-18",
+          "term": "Easement"
+        },
+        {
+          "def": "An easement that benefits a neighboring parcel (dominant tenement) and burdens the servient tenement. It runs with the land.",
+          "id": "ownership-19",
+          "term": "Easement appurtenant"
+        },
+        {
+          "def": "An easement that benefits a person or company, such as a utility, rather than a parcel of land.",
+          "id": "ownership-20",
+          "term": "Easement in gross"
+        },
+        {
+          "def": "An easement acquired by open, notorious, continuous, and hostile use of another's land for the period set by state law.",
+          "id": "ownership-21",
+          "term": "Easement by prescription"
+        },
+        {
+          "def": "An improvement, such as a fence or garage, that extends onto a neighbor's property without permission. Usually revealed by a survey.",
+          "id": "ownership-22",
+          "term": "Encroachment"
+        },
+        {
+          "def": "Any claim, lien, charge, or liability attached to property that may lessen its value or limit its use: liens, easements, deed restrictions, encroachments.",
+          "id": "ownership-23",
+          "term": "Encumbrance"
+        },
+        {
+          "def": "A financial claim against property as security for a debt. Specific liens attach to one property; general liens attach to all of a debtor's property.",
+          "id": "ownership-24",
+          "term": "Lien"
+        },
+        {
+          "def": "A specific lien filed by contractors or suppliers who were not paid for work or materials that improved the property.",
+          "id": "ownership-25",
+          "term": "Mechanic's lien"
+        },
+        {
+          "id": "ownership-26",
+          "term": "Easement by necessity",
+          "def": "An easement created by law when a parcel is sold with no access to a public road (landlocked), letting the owner cross the seller's land to reach it."
+        },
+        {
+          "id": "ownership-27",
+          "term": "Estate in land",
+          "def": "The degree, quantity, nature, and extent of an owner's interest in real property. Estates are either freehold or leasehold (nonfreehold)."
+        },
+        {
+          "id": "ownership-28",
+          "term": "Fee simple",
+          "def": "The most complete form of ownership: held for an indefinite time and inheritable. Includes fee simple absolute and fee simple defeasible."
+        },
+        {
+          "id": "ownership-29",
+          "term": "Fee simple determinable",
+          "def": "A defeasible fee that ends automatically if a stated condition is broken. Signaled by words like \"so long as,\" \"while,\" or \"during.\" The grantor keeps a possibility of reverter."
+        },
+        {
+          "id": "ownership-30",
+          "term": "Fee simple subject to a condition subsequent",
+          "def": "A defeasible fee where, if the condition is broken, the grantor has a right of re-entry and must take legal action to reclaim the property. Signaled by \"on the condition that\" or \"provided that.\""
+        },
+        {
+          "id": "ownership-31",
+          "term": "Freehold estate",
+          "def": "An estate of indeterminate length, such as a fee simple or a life estate. Contrast with leasehold estates, which last a set term."
+        },
+        {
+          "id": "ownership-32",
+          "term": "Future interest",
+          "def": "A right to possess property at a later time, such as a remainder or a reversion after a life estate ends."
+        },
+        {
+          "id": "ownership-33",
+          "term": "Homestead",
+          "def": "A legally protected interest in an owner's primary residence. Depending on the state, it shields some or all of the home's value from certain unsecured creditors; it usually does not protect against mortgages, property tax liens, or mechanic's liens."
+        },
+        {
+          "id": "ownership-34",
+          "term": "Legal life estate",
+          "def": "A life estate created by state law rather than by the owner's deed or will, such as dower, curtesy, or homestead rights."
+        },
+        {
+          "id": "ownership-35",
+          "term": "License",
+          "def": "Personal, revocable permission to enter someone's land for a specific purpose, such as a concert ticket or permission to fish. Not an interest in land; it ends if the owner dies or sells."
+        },
+        {
+          "id": "ownership-36",
+          "term": "Reversionary interest",
+          "def": "A future interest in which the property returns to the original owner (grantor) or the grantor's heirs when a life estate ends."
+        },
+        {
+          "id": "ownership-37",
+          "term": "Uniform Probate Code (UPC)",
+          "def": "A model law, adopted in whole or in part by some states, that standardizes and simplifies wills, intestate succession, and probate."
+        },
+        {
+          "id": "ownership-38",
+          "term": "Common elements",
+          "def": "The parts of a condominium owned jointly by all unit owners as tenants in common, such as the land, hallways, roof, pool, and elevators."
+        },
+        {
+          "id": "ownership-39",
+          "term": "Co-ownership",
+          "def": "Ownership of property by two or more people at the same time (concurrent ownership). Forms include tenancy in common, joint tenancy, tenancy by the entirety, and community property."
+        },
+        {
+          "id": "ownership-40",
+          "term": "Corporation",
+          "def": "A legal entity created under state law that can own real estate in its own name, in severalty. Shareholders have limited liability, but profits are taxed twice (corporate income tax, then tax on dividends)."
+        },
+        {
+          "id": "ownership-41",
+          "term": "General partnership",
+          "def": "A partnership in which all partners share in managing the business and each is fully, personally liable for the partnership's debts."
+        },
+        {
+          "id": "ownership-42",
+          "term": "Limited liability company (LLC)",
+          "def": "A business entity that combines a corporation's limited liability with a partnership's pass-through taxation and flexible management. Members are not personally liable for the company's debts."
+        },
+        {
+          "id": "ownership-43",
+          "term": "Limited partnership",
+          "def": "A partnership with at least one general partner, who manages the business and has unlimited liability, and limited partners, who invest but do not manage and can lose only what they invested."
+        },
+        {
+          "id": "ownership-44",
+          "term": "Partition",
+          "def": "A lawsuit that ends co-ownership when the owners cannot agree. The court divides the property, or orders it sold and splits the proceeds among the owners."
+        },
+        {
+          "id": "ownership-45",
+          "term": "Partnership",
+          "def": "An association of two or more people who carry on a business as co-owners for profit. In most states, a partnership can hold title to real estate in its own name."
+        },
+        {
+          "id": "ownership-46",
+          "term": "PITT",
+          "def": "Memory aid for the four unities required to create a joint tenancy: Possession, Interest, Time, and Title."
+        },
+        {
+          "id": "ownership-47",
+          "term": "Separate property",
+          "def": "In community property states, property a spouse owned before marriage or received during marriage by gift or inheritance. That spouse can sell or mortgage it without the other spouse's signature."
+        },
+        {
+          "id": "ownership-48",
+          "term": "Severalty",
+          "def": "Ownership by one person or one legal entity alone, \"severed\" from all others. At the owner's death, the property passes by will or to heirs."
+        },
+        {
+          "id": "ownership-49",
+          "term": "Time-share",
+          "def": "Ownership or use of a property for a set period each year, such as one week. A time-share estate is a fee interest; a time-share use is only a right to use the property, with no ownership."
+        },
+        {
+          "id": "ownership-50",
+          "term": "Town house",
+          "def": "A home that shares walls with neighboring units. The owner usually owns the unit and the land beneath it, while an association owns the common areas. Unlike a condo, where the owner holds only the unit's airspace."
+        },
+        {
+          "id": "ownership-51",
+          "term": "Trust",
+          "def": "An arrangement in which a trustor transfers property to a trustee, who holds and manages it for a beneficiary. Common types: living (inter vivos), testamentary, and land trusts."
+        }
+      ]
+    },
+    {
+      "id": "landuse",
+      "name": "Land Use & Government",
+      "order": 2,
+      "cards": [
+        {
+          "id": "landuse-01",
+          "term": "PETE",
+          "def": "The four powers government holds over private property: Police power, Eminent domain, Taxation, Escheat."
+        },
+        {
+          "id": "landuse-02",
+          "term": "Police power",
+          "def": "Government's power to regulate property for public health, safety, and welfare. Basis for zoning, building codes, and environmental rules."
+        },
+        {
+          "id": "landuse-03",
+          "term": "Eminent domain",
+          "def": "Government's power to take private property for public use with just compensation."
+        },
+        {
+          "id": "landuse-04",
+          "term": "Condemnation",
+          "def": "The legal process the government uses to exercise eminent domain."
+        },
+        {
+          "id": "landuse-05",
+          "term": "Escheat",
+          "def": "Property reverts to the state when an owner dies with no will and no heirs."
+        },
+        {
+          "id": "landuse-06",
+          "term": "Zoning ordinance",
+          "def": "Local law that divides land into zones and regulates use, density, building height, and setbacks."
+        },
+        {
+          "id": "landuse-07",
+          "term": "Nonconforming use",
+          "def": "A use that was legal before a zoning change and is allowed to continue (grandfathered). It usually cannot be expanded or rebuilt if destroyed."
+        },
+        {
+          "id": "landuse-08",
+          "term": "Variance",
+          "def": "Permission to depart from a zoning requirement, such as a setback, because strict enforcement would cause undue hardship."
+        },
+        {
+          "id": "landuse-09",
+          "term": "Conditional use permit",
+          "def": "Allows a use not normally permitted in a zone because it serves the public, such as a church or school in a residential area. Also called a special use permit."
+        },
+        {
+          "id": "landuse-10",
+          "term": "Setback",
+          "def": "The minimum required distance between a structure and the property lines."
+        },
+        {
+          "id": "landuse-11",
+          "term": "Deed restrictions",
+          "def": "Private limits on how a property may be used, written into a deed by the seller and binding on later owners, such as a ban on mobile homes or a minimum house size."
+        },
+        {
+          "id": "landuse-12",
+          "term": "Building code",
+          "def": "Minimum construction standards, enforced through building permits and inspections."
+        },
+        {
+          "id": "landuse-13",
+          "term": "Certificate of occupancy",
+          "def": "A document issued after inspection showing a building meets codes and may be occupied."
+        },
+        {
+          "id": "landuse-14",
+          "term": "Ad valorem tax",
+          "def": "A tax based on the value of property. Property taxes are ad valorem taxes."
+        },
+        {
+          "id": "landuse-15",
+          "term": "Special assessment",
+          "def": "A tax charged only to properties that benefit from a specific public improvement, such as new sidewalks or sewer lines."
+        },
+        {
+          "id": "landuse-16",
+          "term": "Mill",
+          "def": "One-tenth of a cent ($0.001). A tax rate of 25 mills means $25 per $1,000 of assessed value."
+        },
+        {
+          "id": "landuse-17",
+          "term": "Real estate tax lien priority",
+          "def": "Unpaid property taxes and special assessments become liens that take priority over other liens, including a first mortgage."
+        },
+        {
+          "id": "landuse-18",
+          "term": "Covenants, conditions, and restrictions (CC&Rs)",
+          "def": "Private rules recorded by a developer for a subdivision or condominium, limiting how lots and homes may be used. Enforced by the owners or the homeowners association."
+        },
+        {
+          "id": "landuse-19",
+          "term": "Taking",
+          "def": "The government's acquisition of private property for public use through eminent domain. The Fifth Amendment requires just compensation."
+        },
+        {
+          "id": "landuse-20",
+          "term": "Inverse condemnation",
+          "def": "A lawsuit brought by an owner seeking compensation when government action, such as flooding from a public project or noise from a new airport, effectively takes or damages the property without a formal condemnation."
+        },
+        {
+          "id": "landuse-21",
+          "term": "Taxation",
+          "def": "Government's power to tax real property to raise revenue. Unpaid property taxes become a lien that takes priority over other liens, including a first mortgage."
+        }
+      ]
+    },
+    {
+      "id": "valuation",
+      "name": "Valuation & Appraisal",
+      "order": 3,
+      "cards": [
+        {
+          "id": "valuation-01",
+          "term": "Market value",
+          "def": "The most probable price a property should bring in a competitive, open market, with a knowledgeable buyer and seller each acting prudently and without undue pressure."
+        },
+        {
+          "id": "valuation-02",
+          "term": "Appraisal",
+          "def": "An unbiased opinion of value by a licensed or certified appraiser, as of a specific date."
+        },
+        {
+          "id": "valuation-03",
+          "term": "Sales comparison approach",
+          "def": "Estimates value from recent sales of similar properties, adjusted for differences. Most reliable for single-family homes and land."
+        },
+        {
+          "id": "valuation-04",
+          "term": "Comparable (comp)",
+          "def": "A recently sold, similar property used in the sales comparison approach. Adjustments are made to the comp, never to the subject property."
+        },
+        {
+          "id": "valuation-05",
+          "term": "Cost approach",
+          "def": "Land value + (reproduction or replacement cost of improvements − depreciation). Best for new or special-purpose properties such as schools or churches."
+        },
+        {
+          "id": "valuation-06",
+          "term": "Income approach",
+          "def": "Value = net operating income ÷ capitalization rate. Used for income-producing properties."
+        },
+        {
+          "id": "valuation-07",
+          "term": "Net operating income (NOI)",
+          "def": "Potential gross income minus vacancy and collection loss, minus operating expenses. Mortgage payments (debt service) are not deducted."
+        },
+        {
+          "id": "valuation-08",
+          "term": "Capitalization rate",
+          "def": "The rate of return an investor expects: NOI ÷ value. A higher cap rate means a lower value for the same income."
+        },
+        {
+          "id": "valuation-09",
+          "term": "Gross rent multiplier (GRM)",
+          "def": "Sales price ÷ monthly gross rent. Used to value small residential rentals. A gross income multiplier (GIM) uses annual income."
+        },
+        {
+          "id": "valuation-10",
+          "term": "Depreciation",
+          "def": "Loss in value from any cause: physical deterioration, functional obsolescence, or external obsolescence."
+        },
+        {
+          "id": "valuation-11",
+          "term": "Functional obsolescence",
+          "def": "Loss in value from outdated or poor design inside the property, such as one bathroom in a four-bedroom house."
+        },
+        {
+          "id": "valuation-12",
+          "term": "External obsolescence",
+          "def": "Loss in value from factors outside the property, such as a new highway or rising crime. Always incurable by the owner."
+        },
+        {
+          "id": "valuation-13",
+          "term": "Principle of substitution",
+          "def": "A buyer will not pay more for a property than the cost of an equally desirable substitute. The basis of the sales comparison approach."
+        },
+        {
+          "id": "valuation-14",
+          "term": "Highest and best use",
+          "def": "The use that is legally permissible, physically possible, financially feasible, and maximally productive."
+        },
+        {
+          "id": "valuation-15",
+          "term": "Principle of conformity",
+          "def": "Value is maximized when a property is similar in style and use to the properties around it."
+        },
+        {
+          "id": "valuation-16",
+          "term": "Regression vs. progression",
+          "def": "Regression: a better property loses value among lesser ones. Progression: a lesser property gains value among better ones."
+        },
+        {
+          "id": "valuation-17",
+          "term": "Comparative market analysis (CMA)",
+          "def": "An agent's estimate of a likely selling price based on recent sales, pending sales, and active listings. Not an appraisal."
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "Financing",
+      "order": 4,
+      "cards": [
+        {
+          "id": "finance-01",
+          "term": "Promissory note",
+          "def": "The borrower's written promise to repay a debt. It is the evidence of the debt."
+        },
+        {
+          "id": "finance-02",
+          "term": "Mortgage",
+          "def": "The document that pledges property as security for a loan. The borrower is the mortgagor; the lender is the mortgagee."
+        },
+        {
+          "id": "finance-03",
+          "term": "Deed of trust",
+          "def": "A security instrument with three parties: the trustor (borrower), the beneficiary (lender), and a trustee who holds title until the loan is repaid."
+        },
+        {
+          "id": "finance-04",
+          "term": "Amortization",
+          "def": "Paying off a loan through regular payments of principal and interest so the balance reaches zero at the end of the term."
+        },
+        {
+          "id": "finance-05",
+          "term": "Loan-to-value ratio (LTV)",
+          "def": "Loan amount ÷ the property's appraised value or sales price, whichever is lower."
+        },
+        {
+          "id": "finance-06",
+          "term": "Private mortgage insurance (PMI)",
+          "def": "Insurance protecting the lender on a conventional loan, usually required when the down payment is under 20% (LTV above 80%)."
+        },
+        {
+          "id": "finance-07",
+          "term": "Discount point",
+          "def": "Prepaid interest paid at closing to lower the interest rate. One point equals 1% of the loan amount."
+        },
+        {
+          "id": "finance-08",
+          "term": "Escrow (impound) account",
+          "def": "An account the lender holds to pay property taxes and insurance, funded as part of the monthly payment."
+        },
+        {
+          "id": "finance-09",
+          "term": "Acceleration clause",
+          "def": "Lets the lender declare the entire loan balance due immediately if the borrower defaults."
+        },
+        {
+          "id": "finance-10",
+          "term": "Alienation (due-on-sale) clause",
+          "def": "Requires the loan to be paid in full if the property is sold or transferred. Prevents a buyer from assuming the loan without approval."
+        },
+        {
+          "id": "finance-11",
+          "term": "Foreclosure",
+          "def": "The legal process in which a lender sells the property to satisfy the debt after the borrower defaults."
+        },
+        {
+          "id": "finance-12",
+          "term": "Deficiency judgment",
+          "def": "A court judgment against the borrower for the remaining debt when the foreclosure sale does not cover the loan balance."
+        },
+        {
+          "id": "finance-13",
+          "term": "Equitable vs. statutory redemption",
+          "def": "Equitable: the borrower may pay off the debt and stop the foreclosure before the sale. Statutory: in some states, the borrower may reclaim the property for a period after the sale."
+        },
+        {
+          "id": "finance-14",
+          "term": "Conventional loan",
+          "def": "A mortgage loan not insured or guaranteed by a government agency."
+        },
+        {
+          "id": "finance-15",
+          "term": "FHA loan",
+          "def": "A loan insured by the Federal Housing Administration. Allows a low down payment and requires a mortgage insurance premium (MIP)."
+        },
+        {
+          "id": "finance-16",
+          "term": "VA loan",
+          "def": "A loan guaranteed by the Department of Veterans Affairs for eligible veterans and service members. May require no down payment."
+        },
+        {
+          "id": "finance-17",
+          "term": "Adjustable-rate mortgage (ARM)",
+          "def": "A loan whose rate equals an index plus a fixed margin, adjusting periodically within rate caps."
+        },
+        {
+          "id": "finance-18",
+          "term": "Balloon payment",
+          "def": "A large final payment due on a loan that is not fully amortized over its term."
+        },
+        {
+          "id": "finance-19",
+          "term": "Secondary mortgage market",
+          "def": "Where existing loans are bought and sold, freeing lenders to make new loans. Key players: Fannie Mae, Freddie Mac, and Ginnie Mae."
+        },
+        {
+          "id": "finance-20",
+          "term": "Truth in Lending Act (Regulation Z)",
+          "def": "Requires lenders to disclose the cost of credit, including the APR. Certain terms in an ad (trigger terms) require full disclosure."
+        },
+        {
+          "id": "finance-21",
+          "term": "Annual percentage rate (APR)",
+          "def": "The total yearly cost of credit, including interest, points, and certain fees. Usually higher than the note rate."
+        },
+        {
+          "id": "finance-22",
+          "term": "RESPA",
+          "def": "Real Estate Settlement Procedures Act. Covers federally related residential loans, requires settlement disclosures, and prohibits kickbacks and unearned referral fees."
+        },
+        {
+          "id": "finance-23",
+          "term": "Loan Estimate & Closing Disclosure",
+          "def": "Under TRID rules: the Loan Estimate is due within 3 business days of loan application; the Closing Disclosure must be received at least 3 business days before closing."
+        },
+        {
+          "id": "finance-24",
+          "term": "Subordination agreement",
+          "def": "An agreement in which a lender accepts a lower lien priority than it would otherwise hold."
+        }
+      ]
+    },
+    {
+      "id": "contracts",
+      "name": "Contracts",
+      "order": 5,
+      "cards": [
+        {
+          "id": "contracts-01",
+          "term": "Essential elements of a valid contract",
+          "def": "Competent parties, offer and acceptance (mutual assent), consideration, and legal purpose. Real estate sales contracts must also be in writing."
+        },
+        {
+          "id": "contracts-02",
+          "term": "Statute of Frauds",
+          "def": "Requires certain contracts, including contracts to sell real estate, to be in writing to be enforceable."
+        },
+        {
+          "id": "contracts-03",
+          "term": "Void contract",
+          "def": "Has no legal force from the start, such as a contract for an illegal purpose."
+        },
+        {
+          "id": "contracts-04",
+          "term": "Voidable contract",
+          "def": "Valid, but one party may choose to cancel it, such as a contract signed by a minor."
+        },
+        {
+          "id": "contracts-05",
+          "term": "Unenforceable contract",
+          "def": "Appears valid but a court will not enforce it, such as an oral agreement to sell real estate."
+        },
+        {
+          "id": "contracts-06",
+          "term": "Bilateral contract",
+          "def": "A promise exchanged for a promise. Both parties are obligated. Example: a purchase agreement."
+        },
+        {
+          "id": "contracts-07",
+          "term": "Unilateral contract",
+          "def": "A promise exchanged for an act. Only one party is obligated. Examples: an open listing or an option."
+        },
+        {
+          "id": "contracts-08",
+          "term": "Executory vs. executed",
+          "def": "Executory: obligations not yet fully performed (a signed purchase contract before closing). Executed: fully performed by all parties."
+        },
+        {
+          "id": "contracts-09",
+          "term": "Counteroffer",
+          "def": "A response that changes the terms of an offer. It rejects and ends the original offer."
+        },
+        {
+          "id": "contracts-10",
+          "term": "Earnest money",
+          "def": "A deposit showing the buyer's good faith, held in an escrow or trust account until closing."
+        },
+        {
+          "id": "contracts-11",
+          "term": "Contingency",
+          "def": "A condition that must be met before the contract becomes binding, such as financing, inspection, or appraisal."
+        },
+        {
+          "id": "contracts-12",
+          "term": "Option",
+          "def": "The optionee pays for the right to buy at a set price within a set time. The optionor (owner) is bound; the optionee is not obligated to buy."
+        },
+        {
+          "id": "contracts-13",
+          "term": "Right of first refusal",
+          "def": "The right to match an offer and buy the property before the owner sells to someone else."
+        },
+        {
+          "id": "contracts-14",
+          "term": "Assignment vs. novation",
+          "def": "Assignment transfers contract rights to another party, but the original party stays liable. Novation replaces the contract or party and releases the original party."
+        },
+        {
+          "id": "contracts-15",
+          "term": "Equitable title",
+          "def": "The buyer's interest in the property after signing a purchase contract and before closing."
+        },
+        {
+          "id": "contracts-16",
+          "term": "Time is of the essence",
+          "def": "A clause making the contract's deadlines strict. Missing a deadline is a breach."
+        },
+        {
+          "id": "contracts-17",
+          "term": "Liquidated damages",
+          "def": "An amount agreed in advance as full compensation for a breach, often the earnest money deposit."
+        },
+        {
+          "id": "contracts-18",
+          "term": "Specific performance",
+          "def": "A court order requiring a party to perform the contract. Available in real estate because each property is unique."
+        },
+        {
+          "id": "contracts-19",
+          "term": "Rescission",
+          "def": "Canceling a contract and returning both parties to their original positions."
+        },
+        {
+          "id": "contracts-20",
+          "term": "Land contract (contract for deed)",
+          "def": "Seller financing in which the buyer (vendee) takes possession and equitable title, while the seller (vendor) keeps legal title until the price is paid."
+        }
+      ]
+    },
+    {
+      "id": "agency",
+      "name": "Agency & Listings",
+      "order": 6,
+      "cards": [
+        {
+          "id": "agency-01",
+          "term": "Agency",
+          "def": "A fiduciary relationship in which an agent is authorized to act on behalf of a principal."
+        },
+        {
+          "id": "agency-02",
+          "term": "Client vs. customer",
+          "def": "The client (principal) is the person the agent represents and owes fiduciary duties to. A customer is a third party owed honesty and fair dealing, but not representation."
+        },
+        {
+          "id": "agency-03",
+          "term": "Fiduciary duties (OLD CAR)",
+          "def": "Obedience, Loyalty, Disclosure, Confidentiality, Accounting, and Reasonable care."
+        },
+        {
+          "id": "agency-04",
+          "term": "Special agent",
+          "def": "Authorized to perform one specific act or transaction. Most listing and buyer's agents are special agents."
+        },
+        {
+          "id": "agency-05",
+          "term": "General agent",
+          "def": "Authorized to handle a range of matters for the principal, such as a property manager."
+        },
+        {
+          "id": "agency-06",
+          "term": "Universal agent",
+          "def": "Authorized to do anything the principal could do, such as under a general power of attorney."
+        },
+        {
+          "id": "agency-07",
+          "term": "Dual agency",
+          "def": "One licensee or brokerage represents both buyer and seller in the same transaction. Requires informed written consent; illegal in some states."
+        },
+        {
+          "id": "agency-08",
+          "term": "Designated agency",
+          "def": "The broker appoints different licensees within the firm to represent the buyer and the seller separately."
+        },
+        {
+          "id": "agency-09",
+          "term": "Exclusive right-to-sell listing",
+          "def": "One broker earns the commission no matter who sells the property, even the owner."
+        },
+        {
+          "id": "agency-10",
+          "term": "Exclusive agency listing",
+          "def": "One broker is authorized, but the owner may sell the property personally without owing a commission."
+        },
+        {
+          "id": "agency-11",
+          "term": "Open listing",
+          "def": "Several brokers may market the property; only the broker who produces the buyer is paid. The owner may sell without paying a commission."
+        },
+        {
+          "id": "agency-12",
+          "term": "Net listing",
+          "def": "The broker keeps everything above the seller's stated net price. Illegal or discouraged in many states."
+        },
+        {
+          "id": "agency-13",
+          "term": "Procuring cause",
+          "def": "The broker whose efforts started an uninterrupted chain of events that resulted in the sale."
+        },
+        {
+          "id": "agency-14",
+          "term": "Ready, willing, and able buyer",
+          "def": "A buyer prepared to purchase on the seller's terms. Producing one generally earns the broker's commission."
+        },
+        {
+          "id": "agency-15",
+          "term": "Buyer representation agreement",
+          "def": "A written agreement between a buyer and a broker setting the terms and compensation. Under NAR rules since August 2024, MLS participants must have one before touring a home with a buyer."
+        },
+        {
+          "id": "agency-16",
+          "term": "Puffing",
+          "def": "Exaggerated, subjective opinions such as \"best view in town.\" Not fraud, but licensees should avoid it."
+        },
+        {
+          "id": "agency-17",
+          "term": "Misrepresentation vs. fraud",
+          "def": "Misrepresentation is a false statement of a material fact. Fraud is intentional misrepresentation that causes harm. Negligent misrepresentation occurs when the licensee should have known the truth."
+        },
+        {
+          "id": "agency-18",
+          "term": "Latent defect",
+          "def": "A hidden defect not discoverable by ordinary inspection. Must be disclosed if known."
+        },
+        {
+          "id": "agency-19",
+          "term": "Commingling",
+          "def": "Mixing client or customer funds with the broker's own business or personal funds. Illegal."
+        },
+        {
+          "id": "agency-20",
+          "term": "Conversion",
+          "def": "Using client or customer funds for personal use. Illegal and often criminal."
+        },
+        {
+          "id": "agency-21",
+          "term": "How agency ends",
+          "def": "Completion of the purpose, expiration, mutual agreement, death or incapacity of either party, destruction of the property, bankruptcy, or revocation by the principal or renunciation by the agent."
+        }
+      ]
+    },
+    {
+      "id": "title",
+      "name": "Title, Deeds & Closing",
+      "order": 7,
+      "cards": [
+        {
+          "id": "title-01",
+          "term": "Deed",
+          "def": "The written instrument that transfers title from grantor (seller) to grantee (buyer)."
+        },
+        {
+          "id": "title-02",
+          "term": "Requirements of a valid deed",
+          "def": "In writing, a competent grantor, an identifiable grantee, a recital of consideration, a granting clause, a legal description, the grantor's signature, and delivery and acceptance."
+        },
+        {
+          "id": "title-03",
+          "term": "General warranty deed",
+          "def": "Gives the buyer the most protection. The grantor warrants title against defects back through all prior owners (covenants of seisin, quiet enjoyment, against encumbrances, further assurance, and warranty forever)."
+        },
+        {
+          "id": "title-04",
+          "term": "Special warranty deed",
+          "def": "The grantor warrants only against defects that arose during the grantor's own ownership."
+        },
+        {
+          "id": "title-05",
+          "term": "Bargain and sale deed",
+          "def": "Implies the grantor holds title but makes no warranties against encumbrances."
+        },
+        {
+          "id": "title-06",
+          "term": "Quitclaim deed",
+          "def": "Conveys whatever interest the grantor has, if any, with no warranties. Often used to clear a cloud on title."
+        },
+        {
+          "id": "title-07",
+          "term": "Acknowledgment",
+          "def": "A formal declaration before a notary that the signer signed voluntarily. Required to record a deed, but not to make it valid in most states."
+        },
+        {
+          "id": "title-08",
+          "term": "Recording",
+          "def": "Filing a document in the public records to give constructive notice to the world."
+        },
+        {
+          "id": "title-09",
+          "term": "Constructive vs. actual notice",
+          "def": "Constructive notice is knowledge the law presumes from public records or possession. Actual notice is what a person has actually seen or been told."
+        },
+        {
+          "id": "title-10",
+          "term": "Chain of title",
+          "def": "The recorded history of ownership of a property, from one owner to the next."
+        },
+        {
+          "id": "title-11",
+          "term": "Abstract of title",
+          "def": "A condensed history of the recorded documents affecting a property's title."
+        },
+        {
+          "id": "title-12",
+          "term": "Title insurance",
+          "def": "Protects against losses from title defects not found in the title search. An owner's policy protects the buyer; a lender's policy protects the lender."
+        },
+        {
+          "id": "title-13",
+          "term": "Cloud on title",
+          "def": "Any claim or document that impairs the title. Removed with a quitclaim deed or a quiet title action."
+        },
+        {
+          "id": "title-14",
+          "term": "Adverse possession",
+          "def": "Acquiring title by open, notorious, continuous, hostile, and exclusive possession of another's land for the period set by state law."
+        },
+        {
+          "id": "title-15",
+          "term": "Metes and bounds",
+          "def": "A legal description that starts at a point of beginning and follows distances (metes) and directions or monuments (bounds) back to that point."
+        },
+        {
+          "id": "title-16",
+          "term": "Rectangular survey system",
+          "def": "Government survey system using principal meridians and base lines. A township is 6 miles square and contains 36 sections."
+        },
+        {
+          "id": "title-17",
+          "term": "Section",
+          "def": "One square mile in the rectangular survey system: 640 acres."
+        },
+        {
+          "id": "title-18",
+          "term": "Lot and block",
+          "def": "A legal description that refers to a lot on a recorded subdivision plat."
+        },
+        {
+          "id": "title-19",
+          "term": "Prorations",
+          "def": "Dividing ongoing expenses and income, such as taxes and rent, between buyer and seller as of the closing date."
+        },
+        {
+          "id": "title-20",
+          "term": "Debit vs. credit",
+          "def": "On a closing statement, a debit is an amount a party owes or is charged; a credit is an amount a party receives or is credited."
+        },
+        {
+          "id": "title-21",
+          "term": "Transfer tax",
+          "def": "A state or local tax charged when real property changes ownership, usually based on the sales price."
+        },
+        {
+          "id": "title-22",
+          "term": "Testate vs. intestate",
+          "def": "Testate: dying with a valid will. Intestate: dying without one; property passes to heirs under state law (descent)."
+        },
+        {
+          "id": "title-23",
+          "term": "Devise",
+          "def": "A gift of real property by will. The recipient is the devisee."
+        },
+        {
+          "id": "title-24",
+          "term": "Probate",
+          "def": "The court process that validates a will, settles debts, and distributes the estate."
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "name": "Fair Housing & Leasing",
+      "order": 8,
+      "cards": [
+        {
+          "id": "practice-01",
+          "term": "Fair Housing Act (1968)",
+          "def": "Prohibits housing discrimination based on race, color, religion, national origin, sex, disability, and familial status. Disability and familial status were added in 1988."
+        },
+        {
+          "id": "practice-02",
+          "term": "Civil Rights Act of 1866",
+          "def": "Prohibits all discrimination based on race in property transactions, with no exceptions."
+        },
+        {
+          "id": "practice-03",
+          "term": "Steering",
+          "def": "Channeling buyers or renters toward or away from neighborhoods based on a protected class. Illegal."
+        },
+        {
+          "id": "practice-04",
+          "term": "Blockbusting",
+          "def": "Inducing owners to sell by suggesting that people of a protected class are moving into the neighborhood. Illegal."
+        },
+        {
+          "id": "practice-05",
+          "term": "Redlining",
+          "def": "A lender refusing to make loans, or making them on worse terms, in certain areas based on the residents' race or ethnicity. Illegal."
+        },
+        {
+          "id": "practice-06",
+          "term": "Familial status",
+          "def": "Households with children under 18 living with a parent or guardian, pregnant women, and people obtaining custody of a child."
+        },
+        {
+          "id": "practice-07",
+          "term": "Reasonable accommodation vs. modification",
+          "def": "An accommodation changes a rule or policy (allowing an assistance animal). A modification is a physical change (a ramp), usually at the tenant's expense."
+        },
+        {
+          "id": "practice-08",
+          "term": "Housing for older persons",
+          "def": "Exempt from familial status rules: housing where all residents are 62 or older, or where at least 80% of occupied units have at least one resident 55 or older."
+        },
+        {
+          "id": "practice-09",
+          "term": "Americans with Disabilities Act (ADA)",
+          "def": "Requires accessibility in public accommodations and commercial facilities, including real estate offices."
+        },
+        {
+          "id": "practice-10",
+          "term": "Estate for years",
+          "def": "A lease with definite start and end dates. Ends automatically; no notice required."
+        },
+        {
+          "id": "practice-11",
+          "term": "Periodic tenancy",
+          "def": "A lease that renews automatically for successive periods (such as month-to-month) until either party gives notice."
+        },
+        {
+          "id": "practice-12",
+          "term": "Tenancy at will",
+          "def": "A lease of indefinite length that either party may end with notice. Ends at the death of either party."
+        },
+        {
+          "id": "practice-13",
+          "term": "Tenancy at sufferance",
+          "def": "A tenant stays after the lease expires without the landlord's consent."
+        },
+        {
+          "id": "practice-14",
+          "term": "Gross lease",
+          "def": "The tenant pays a fixed rent and the landlord pays property expenses. Common for residential leases."
+        },
+        {
+          "id": "practice-15",
+          "term": "Net lease",
+          "def": "The tenant pays rent plus some or all property expenses such as taxes, insurance, and maintenance. Common for commercial leases."
+        },
+        {
+          "id": "practice-16",
+          "term": "Percentage lease",
+          "def": "The tenant pays base rent plus a percentage of gross sales. Common for retail."
+        },
+        {
+          "id": "practice-17",
+          "term": "Ground lease",
+          "def": "A long-term lease of land only, on which the tenant builds."
+        },
+        {
+          "id": "practice-18",
+          "term": "Constructive eviction",
+          "def": "The landlord's failure to maintain the premises makes them unusable, so the tenant may leave and stop paying rent."
+        },
+        {
+          "id": "practice-19",
+          "term": "Sublease vs. assignment of lease",
+          "def": "Sublease: the original tenant transfers part of the term and stays liable to the landlord. Assignment: the tenant transfers the entire remaining interest."
+        },
+        {
+          "id": "practice-20",
+          "term": "Lead-based paint disclosure",
+          "def": "For housing built before 1978: sellers and landlords must disclose known lead hazards and provide the EPA pamphlet. Buyers get a 10-day opportunity to inspect."
+        },
+        {
+          "id": "practice-21",
+          "term": "Antitrust violations",
+          "def": "Price fixing, group boycotting, market allocation, and tie-in arrangements. Brokers must set commissions independently."
+        },
+        {
+          "id": "practice-22",
+          "term": "Radon",
+          "def": "A naturally occurring radioactive gas that seeps from the ground and is a leading cause of lung cancer. Detected by testing; reduced with mitigation systems."
+        }
+      ]
+    },
+    {
+      "id": "math",
+      "name": "Real Estate Math",
+      "order": 9,
+      "cards": [
+        {
+          "id": "math-01",
+          "term": "Acre",
+          "def": "43,560 square feet."
+        },
+        {
+          "id": "math-02",
+          "term": "Section, township, mile",
+          "def": "A section is 1 square mile (640 acres). A township is 36 sections (6 miles × 6 miles). A mile is 5,280 feet."
+        },
+        {
+          "id": "math-03",
+          "term": "Square yard and cubic yard",
+          "def": "1 square yard = 9 square feet. 1 cubic yard = 27 cubic feet."
+        },
+        {
+          "id": "math-04",
+          "term": "Commission",
+          "def": "Sales price × commission rate. Example: $300,000 × 6% = $18,000."
+        },
+        {
+          "id": "math-05",
+          "term": "Seller's net price",
+          "def": "Required sales price = desired net ÷ (1 − commission rate). Example: $282,000 ÷ 0.94 = $300,000."
+        },
+        {
+          "id": "math-06",
+          "term": "Monthly interest",
+          "def": "Loan balance × annual interest rate ÷ 12. Example: $200,000 × 6% ÷ 12 = $1,000."
+        },
+        {
+          "id": "math-07",
+          "term": "Discount points cost",
+          "def": "Loan amount × number of points ÷ 100. Example: 2 points on $250,000 = $5,000."
+        },
+        {
+          "id": "math-08",
+          "term": "Property tax",
+          "def": "Assessed value × tax rate. With mills, divide by 1,000: $200,000 × 25 mills = $5,000."
+        },
+        {
+          "id": "math-09",
+          "term": "IRV formula",
+          "def": "Income = Rate × Value. Value = Income ÷ Rate. Rate = Income ÷ Value."
+        },
+        {
+          "id": "math-10",
+          "term": "Equity",
+          "def": "Market value − all debts owed on the property."
+        },
+        {
+          "id": "math-11",
+          "term": "Proration by days",
+          "def": "Annual amount ÷ 365 (or 360) × number of days. Monthly amount ÷ days in the month × days used."
+        },
+        {
+          "id": "math-12",
+          "term": "Percent profit",
+          "def": "(Selling price − purchase price) ÷ purchase price."
+        },
+        {
+          "id": "math-13",
+          "term": "Loan-to-value math",
+          "def": "Loan = value × LTV. Example: 80% LTV on $300,000 = $240,000 loan, so $60,000 down."
+        },
+        {
+          "id": "math-14",
+          "term": "Debt-to-income ratio",
+          "def": "Total monthly debt payments ÷ gross monthly income."
+        }
+      ]
+    }
+  ],
+  "lists": []
+}

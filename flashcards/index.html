@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RE Cards">
+<meta name="description" content="Flashcards, study lists and multiple-choice tests for the real estate salesperson license exam.">
+<title>Real Estate Exam Cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Mono:wght@500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: one study column like an index card on a plat-map ground; tabs and topic chips above, answer buttons below. */
+:root {
+  --bg: #E9EEF2;
+  --surface: #FFFFFF;
+  --surface-2: #F4F7F9;
+  --ink: #15202B;
+  --muted: #5A6876;
+  --line: #D3DBE2;
+  --accent: #1E5A85;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #DCE8F2;
+  --good: #24754A;
+  --good-soft: #DDF0E4;
+  --warn: #9A5B0C;
+  --warn-soft: #F8E9D2;
+  --grid: rgba(30, 90, 133, 0.07);
+  --shadow: 0 1px 2px rgba(21,32,43,.06), 0 8px 24px rgba(21,32,43,.08);
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E141A; --surface: #17212B; --surface-2: #1C2833; --ink: #E5EBF0; --muted: #92A0AD;
+    --line: #2A3743; --accent: #7AB2DE; --accent-ink: #0B1620; --accent-soft: #1D3346;
+    --good: #63C48E; --good-soft: #17352A; --warn: #E7AE55; --warn-soft: #3A2C17;
+    --grid: rgba(122, 178, 222, 0.06); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E141A; --surface: #17212B; --surface-2: #1C2833; --ink: #E5EBF0; --muted: #92A0AD;
+  --line: #2A3743; --accent: #7AB2DE; --accent-ink: #0B1620; --accent-soft: #1D3346;
+  --good: #63C48E; --good-soft: #17352A; --warn: #E7AE55; --warn-soft: #3A2C17;
+  --grid: rgba(122, 178, 222, 0.06); --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-family: var(--f-display);
+  -webkit-tap-highlight-color: transparent;
+}
+.wrap {
+  max-width: 680px; margin: 0 auto;
+  padding-block: 20px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 16px;
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* header */
+.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
+.eyebrow { margin: 0 0 2px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { margin: 0; font-weight: 800; font-size: clamp(22px, 5vw, 28px); letter-spacing: -.01em; text-wrap: balance; }
+.tabs { display: flex; gap: 2px; padding: 3px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.tab { border: 0; background: transparent; padding: 7px 14px; border-radius: 7px; font-weight: 600; font-size: 14px; color: var(--muted); }
+.tab[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); }
+
+/* progress meter */
+.meter { display: flex; flex-direction: column; gap: 8px; }
+.meter-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.meter-row strong { color: var(--ink); font-size: 15px; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-family: var(--f-mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+.legend span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; background: var(--c); vertical-align: 0; }
+.bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: var(--line); }
+.bar i { display: block; height: 100%; transition: width .3s; }
+
+/* topic chips */
+.decks-scroll { overflow-x: auto; scrollbar-width: none; margin-inline: -4px; padding: 2px 4px; }
+.decks-scroll::-webkit-scrollbar { display: none; }
+.decks { display: flex; gap: 8px; width: max-content; }
+.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 600; white-space: nowrap; display: flex; gap: 6px; align-items: baseline; }
+.chip small { font-family: var(--f-mono); font-size: 11px; color: var(--muted); font-weight: 500; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip[aria-pressed="true"] small { color: inherit; opacity: .7; }
+
+/* options */
+.opts { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.toggles { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); cursor: pointer; }
+.toggle input { width: 16px; height: 16px; accent-color: var(--accent); margin: 0; }
+.link-btn { border: 0; background: none; color: var(--accent); font-weight: 600; font-size: 13px; padding: 4px 0; }
+
+/* card */
+.stage { perspective: 1400px; }
+.card { display: grid; position: relative; width: 100%; min-height: 300px; cursor: pointer; transform-style: preserve-3d; transition: transform .45s cubic-bezier(.3,.7,.2,1); outline-offset: 4px; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.card.is-flipped { transform: rotateY(180deg); }
+.face {
+  grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow);
+  padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0;
+}
+.face.back { transform: rotateY(180deg); background: var(--surface-2); }
+.face-top, .face-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.topic { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.face-body { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px 4px; min-width: 0; }
+.term { margin: 0; font-weight: 800; font-size: clamp(24px, 6vw, 34px); line-height: 1.15; letter-spacing: -.01em; text-wrap: balance; overflow-wrap: anywhere; }
+.def { margin: 0; font-family: var(--f-body); font-size: clamp(17px, 4.2vw, 20px); line-height: 1.5; max-width: 52ch; text-wrap: pretty; overflow-wrap: anywhere; }
+.face-foot { font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ruled { border-top: 1px dashed var(--line); padding-top: 10px; }
+.pill { font-family: var(--f-mono); font-size: 11px; padding: 3px 8px; border-radius: 999px; white-space: nowrap; border: 0; }
+.st-new { background: var(--accent-soft); color: var(--accent); }
+.st-learning { background: var(--warn-soft); color: var(--warn); }
+.st-known { background: var(--good-soft); color: var(--good); }
+
+.notice { background: var(--surface); border: 1px dashed var(--line); border-radius: 14px; padding: 36px 24px; text-align: center; min-height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; }
+.notice h2 { margin: 0; font-size: 22px; font-weight: 800; }
+.notice p { margin: 0; color: var(--muted); font-family: var(--f-body); font-size: 16px; max-width: 42ch; }
+.score { display: flex; gap: 24px; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.score b { display: block; font-size: 28px; font-family: var(--f-display); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+/* answer buttons */
+.actions { display: grid; grid-template-columns: auto 1fr 1fr; gap: 10px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 14px 16px; font-weight: 700; font-size: 16px; }
+.btn:disabled { opacity: .45; cursor: default; }
+.btn-back { padding-inline: 16px; color: var(--muted); }
+.btn-learn { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.btn-know { background: var(--good-soft); color: var(--good); border-color: transparent; }
+.btn-primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+.keys { margin: 0; text-align: center; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+@media (hover: none) { .keys .k { display: none; } }
+@media (hover: hover) { .keys .t { display: none; } }
+
+/* real-world example */
+.example { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+.ex-head h2 { margin: 0; font-size: 12px; font-family: var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+.ex-body { font-family: var(--f-body); font-size: 16px; line-height: 1.55; display: flex; flex-direction: column; gap: 8px; min-width: 0; overflow-wrap: anywhere; }
+.ex-body p { margin: 0; }
+.ex-tip { background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; font-size: 15px; }
+.ex-tip b { font-family: var(--f-display); }
+.ex-muted { color: var(--muted); }
+.ex-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.btn-sm { padding: 9px 13px; font-size: 14px; border-radius: 9px; }
+a.btn { text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; }
+
+/* lists */
+.chip .tag { font-family: var(--f-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+.chip[aria-pressed="true"] .tag { color: inherit; opacity: .7; }
+.chip-sep { width: 1px; align-self: stretch; background: var(--line); margin: 4px 2px; }
+.card-tools { display: flex; justify-content: space-between; align-items: center; gap: 4px 12px; flex-wrap: wrap; font-size: 13px; }
+.card-tools .in { color: var(--muted); min-width: 0; overflow-wrap: anywhere; }
+.sheet-back { position: fixed; inset: 0; background: rgba(10, 16, 22, .5); z-index: 30; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.sheet { background: var(--surface); color: var(--ink); border-radius: 16px; width: 100%; max-width: 420px; padding: 20px; display: flex; flex-direction: column; gap: 14px; box-shadow: var(--shadow); }
+.sheet h2 { margin: 0; font-size: 18px; font-weight: 800; }
+.sheet-term { margin: -8px 0 0; font-family: var(--f-body); font-size: 16px; color: var(--muted); }
+.in-lists { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+.in-lists:empty { display: none; }
+.rm-chip { border: 1px solid var(--line); background: var(--surface-2); border-radius: 999px; padding: 4px 10px; font-size: 12px; }
+.btn-row.end { justify-content: flex-end; }
+.newlist { display: flex; gap: 8px; }
+.newlist input { flex: 1; min-width: 0; padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); font-size: 16px; }
+.lists { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.lcard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.lhead { display: flex; justify-content: space-between; gap: 10px; align-items: start; flex-wrap: wrap; }
+.lhead > div:first-child { min-width: 0; }
+.lhead h3 { margin: 0; font-size: 17px; font-weight: 700; overflow-wrap: anywhere; }
+.lmeta { margin: 2px 0 0; font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lbtns { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.lcard .bar { height: 6px; }
+.lcard summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--accent); }
+.lterms { list-style: none; margin: 8px 0 0; padding: 0; }
+.lterms li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; }
+.lterms li > span { min-width: 0; overflow-wrap: anywhere; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+@media (max-width: 440px) {
+  .sheet-back { align-items: flex-end; padding: 0; }
+  .sheet { max-width: none; border-radius: 16px 16px 0 0; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .tab { padding: 7px 10px; }
+}
+
+/* test */
+.test { display: flex; flex-direction: column; gap: 14px; }
+.t-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 12px; flex-wrap: wrap; font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.t-head strong { font-family: var(--f-display); font-size: 16px; color: var(--ink); }
+.t-q { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 22px 20px; text-align: center; display: flex; flex-direction: column; gap: 8px; }
+.t-opts { display: flex; flex-direction: column; gap: 8px; }
+.t-opt { display: flex; gap: 12px; align-items: flex-start; text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-family: var(--f-body); font-size: 16px; line-height: 1.45; }
+.t-opt:hover:not(:disabled) { border-color: var(--accent); }
+.t-opt:disabled { cursor: default; color: var(--ink); }
+.t-opt > span:last-child { min-width: 0; overflow-wrap: anywhere; padding-top: 1px; }
+.t-key { flex: none; width: 26px; height: 26px; border-radius: 7px; background: var(--surface-2); border: 1px solid var(--line); display: grid; place-items: center; font-family: var(--f-mono); font-size: 12px; }
+.t-opt.right { border-color: var(--good); background: var(--good-soft); }
+.t-opt.right .t-key { background: var(--good); border-color: var(--good); color: var(--surface); }
+.t-opt.wrong { border-color: var(--warn); background: var(--warn-soft); }
+.t-opt.wrong .t-key { background: var(--warn); border-color: var(--warn); color: var(--surface); }
+.t-opt.dim { opacity: .5; }
+.t-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.t-feedback { margin: 0; font-size: 15px; }
+.t-feedback.ok b { color: var(--good); }
+.t-feedback.no b { color: var(--warn); }
+
+/* browse */
+.search { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font-size: 16px; }
+.list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.row { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; }
+.row h3 { margin: 0; font-size: 16px; font-weight: 700; min-width: 0; overflow-wrap: anywhere; }
+.row-open { border: 0; background: none; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.row-open:hover { color: var(--accent); }
+.row-open::after { content: " ›"; color: var(--accent); }
+.row p.row-def { cursor: pointer; }
+.row p { grid-column: 1 / -1; margin: 0; font-family: var(--f-body); font-size: 15px; line-height: 1.45; color: var(--muted); }
+.row-side { display: flex; gap: 6px; align-items: start; }
+.row .pill { cursor: pointer; }
+.del { border: 1px solid var(--line); background: transparent; border-radius: 999px; font-size: 11px; font-family: var(--f-mono); padding: 3px 8px; color: var(--muted); }
+.del.armed { background: var(--warn); color: var(--surface); border-color: var(--warn); }
+.count-note { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin: 10px 0 0; }
+
+/* add */
+.form { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--muted); }
+.field input, .field select, .field textarea { padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-2); font-size: 16px; }
+.field textarea { min-height: 120px; resize: vertical; font-family: var(--f-body); line-height: 1.45; }
+.form-note { margin: 0; font-size: 13px; color: var(--muted); font-family: var(--f-body); }
+
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; box-shadow: var(--shadow); max-width: calc(100% - 32px); z-index: 20; }
+
+@media (max-width: 440px) {
+  .actions { grid-template-columns: 1fr 1fr; }
+  .btn-back { grid-column: 1 / -1; order: 3; padding: 10px; font-size: 14px; }
+  .card, .notice { min-height: 340px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+  .bar i { transition: none; }
+}
+</style>
+
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; font-size: 14px; }
+img { max-width: 100%; }
+</style>
+<script>
+/* Standalone storage: a tiny stand-in for the Claude artifact database.
+   Built-in cards load from data/re-exam-cards-data.json; everything the
+   student creates (progress, lists, custom cards) is kept in this browser. */
+(function () {
+  var KEY = "rec:store:v1", data = {};
+  try { data = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { data = {}; }
+  var subs = new Set();
+  function persist() { try { var c = Object.assign({}, data); delete c.decks; localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {} }
+  function fire() { subs.forEach(function (f) { f(); }); }
+  function snap(id, v) { return { id: id, exists: v !== undefined, data: function () { return v; }, metadata: { fromCache: false, hasPendingWrites: false } }; }
+  function newId() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
+  function clone(v) { return JSON.parse(JSON.stringify(v)); }
+  var ready = fetch("data/re-exam-cards-data.json", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (j) {
+      data.decks = {};
+      (j.topics || []).forEach(function (t) { data.decks[t.id] = { name: t.name, order: t.order, cards: t.cards }; });
+      if (!data.seededLists) {
+        data.lists = data.lists || {};
+        (j.lists || []).forEach(function (l) { if (!data.lists[l.id]) data.lists[l.id] = { name: l.name, cardIds: l.cardIds, createdAt: Date.now() }; });
+        data.seededLists = true; persist();
+      }
+    });
+  function docRef(cp, id) {
+    return {
+      id: id, path: cp + "/" + id,
+      set: function (v) { (data[cp] = data[cp] || {})[id] = clone(v); persist(); setTimeout(fire, 0); return Promise.resolve(); },
+      update: function (v) {
+        if (!data[cp] || !data[cp][id]) return Promise.reject({ code: "invalid_argument", message: "Document does not exist" });
+        Object.assign(data[cp][id], clone(v)); persist(); setTimeout(fire, 0); return Promise.resolve();
+      },
+      delete: function () { if (data[cp]) delete data[cp][id]; persist(); setTimeout(fire, 0); return Promise.resolve(); },
+      onSnapshot: function (next, err) {
+        var f = function () { next(snap(id, (data[cp] || {})[id])); };
+        ready.then(function () { subs.add(f); f(); }, function (e) { err && err({ code: "unavailable", message: String(e) }); });
+        return function () { subs.delete(f); };
+      },
+    };
+  }
+  function col(path) {
+    return {
+      path: path,
+      doc: function (id) { return docRef(path, id || newId()); },
+      add: function (v) { var r = docRef(path, newId()); return r.set(v).then(function () { return r; }); },
+      onSnapshot: function (next, err) {
+        var f = function () {
+          var docs = Object.keys(data[path] || {}).map(function (k) { return snap(k, data[path][k]); });
+          next({ docs: docs, size: docs.length, empty: !docs.length, metadata: { fromCache: false } });
+        };
+        ready.then(function () { subs.add(f); f(); }, function (e) { err && err({ code: "unavailable", message: String(e) }); });
+        return function () { subs.delete(f); };
+      },
+    };
+  }
+  function docPath(p) { var s = p.split("/"); return docRef(s.slice(0, -1).join("/"), s[s.length - 1]); }
+  var db = { collection: col, doc: docPath };
+  var user = { id: function () { return Promise.resolve("local"); } };
+  window.claude = { use: function (n) { return Promise.resolve(n === "db" ? db : n === "user" ? user : null); } };
+})();
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <p class="eyebrow">Salesperson license exam prep</p>
+      <h1>Real Estate Exam Cards</h1>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Views">
+      <button class="tab" role="tab" data-view="study" aria-selected="true">Study</button>
+      <button class="tab" role="tab" data-view="browse" aria-selected="false">Browse</button>
+      <button class="tab" role="tab" data-view="lists" aria-selected="false">Lists</button>
+      <button class="tab" role="tab" data-view="add" aria-selected="false">Add card</button>
+    </nav>
+  </header>
+
+  <section class="meter" id="meter" aria-live="polite"></section>
+  <div class="decks-scroll"><div class="decks" id="decks" role="group" aria-label="Topics"></div></div>
+
+  <section id="view-study" class="view" style="display:flex;flex-direction:column;gap:14px">
+    <div class="opts">
+      <div class="toggles">
+        <label class="toggle"><input type="checkbox" id="opt-unmastered"> Skip mastered cards</label>
+        <label class="toggle"><input type="checkbox" id="opt-deffirst"> Show definition first</label>
+      </div>
+      <button class="link-btn" id="btn-tobrowse" hidden>← Back to Browse</button>
+      <button class="link-btn" id="btn-restart">Shuffle &amp; restart</button>
+    </div>
+    <div class="stage" id="stage"></div>
+    <div class="card-tools" id="card-tools" hidden>
+      <button class="link-btn" id="btn-tolist">+ Add to list</button>
+      <span class="in" id="card-lists"></span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-back" id="btn-back" aria-label="Previous card">← Back</button>
+      <button class="btn btn-learn" id="btn-learn">Still learning</button>
+      <button class="btn btn-know" id="btn-know">Got it</button>
+    </div>
+    <section class="example" id="example" hidden aria-live="polite">
+      <div class="ex-head"><h2>Real-world example</h2></div>
+      <div class="ex-body" id="ex-body"></div>
+      <div class="ex-actions" id="ex-actions"></div>
+    </section>
+    <p class="keys"><span class="k">Space or tap to flip · ← still learning · → got it</span><span class="t">Tap to flip · swipe left: still learning · swipe right: got it</span></p>
+  </section>
+
+  <section id="view-browse" class="view" hidden>
+    <input class="search" id="search" type="search" placeholder="Search all terms and definitions" aria-label="Search cards">
+    <label class="toggle" id="browse-only-wrap" style="margin-top:10px" hidden><input type="checkbox" id="browse-only"> <span id="browse-only-label"></span></label>
+    <p class="count-note" id="browse-count"></p>
+    <div class="list" id="list"></div>
+  </section>
+
+  <section id="view-lists" class="view" hidden>
+    <form class="newlist" id="newlist-form">
+      <input id="newlist-name" maxlength="60" placeholder="New list name, e.g. Water rights" aria-label="New list name">
+      <button class="btn btn-sm btn-primary" type="submit">Create list</button>
+    </form>
+    <div class="lists" id="lists"></div>
+  </section>
+
+  <section id="view-test" class="view test" hidden aria-live="polite"></section>
+
+  <section id="view-add" class="view" hidden>
+    <form class="form" id="add-form">
+      <div class="field">
+        <label for="add-topic">Topic</label>
+        <select id="add-topic"></select>
+      </div>
+      <div class="field">
+        <label for="add-term">Term</label>
+        <input id="add-term" maxlength="120" required placeholder="e.g. Lis pendens">
+      </div>
+      <div class="field">
+        <label for="add-def">Definition</label>
+        <textarea id="add-def" maxlength="800" required placeholder="e.g. A recorded notice that a lawsuit affecting the property's title is pending."></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" id="add-submit">Add card</button>
+      <p class="form-note">Cards you add join the topic you pick and are saved in this browser. You can delete them from Browse.</p>
+    </form>
+  </section>
+</div>
+<div class="sheet-back" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <h2 id="sheet-title">Add to a list</h2>
+    <p class="sheet-term" id="sheet-term"></p>
+    <div class="field">
+      <label for="sheet-list">List</label>
+      <select id="sheet-list"></select>
+    </div>
+    <div class="field" id="sheet-new-wrap" hidden>
+      <label for="sheet-new">New list name</label>
+      <input id="sheet-new" maxlength="60" placeholder="e.g. Tricky terms">
+    </div>
+    <div class="in-lists" id="sheet-in"></div>
+    <div class="btn-row end">
+      <button class="btn btn-sm" data-sheet="cancel">Cancel</button>
+      <button class="btn btn-sm btn-primary" data-sheet="add" id="sheet-add">Add</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem("rec:" + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem("rec:" + k, JSON.stringify(v)); } catch (e) {} },
+  };
+
+  const S = {
+    decks: [], custom: [], progress: {}, lists: [],
+    deck: store.get("deck", "all"),
+    onlyUnmastered: store.get("onlyUnmastered", false),
+    defFirst: store.get("defFirst", false),
+    view: "study",
+    queue: [], idx: 0, flipped: false, started: false,
+    round: { known: 0, learning: 0, missed: new Set(), requeued: new Set() },
+    status: "loading", // loading | slow | nodb | ready | error
+    canSave: true,
+  };
+  let byId = new Map();
+  let db = null, progRef = null;
+
+  /* ---------- data helpers ---------- */
+  function rebuildIndex() {
+    byId = new Map();
+    for (const d of S.decks) for (const c of d.cards || []) byId.set(c.id, { ...c, topic: d.id, topicName: d.name, custom: false });
+    const names = Object.fromEntries(S.decks.map((d) => [d.id, d.name]));
+    for (const c of S.custom) byId.set(c.id, { ...c, topicName: names[c.topic] || "My cards", custom: true });
+    if (S.deck !== "all" && !S.deck.startsWith("list:") && !S.decks.some((d) => d.id === S.deck) && S.decks.length) S.deck = "all";
+  }
+  function cardsIn(deck) {
+    if (deck.startsWith("list:")) {
+      const l = S.lists.find((x) => "list:" + x.id === deck);
+      return l ? l.cardIds.map((id) => byId.get(id)).filter(Boolean) : [];
+    }
+    const all = [...byId.values()];
+    return deck === "all" ? all : all.filter((c) => c.topic === deck);
+  }
+  const statusOf = (id) => S.progress[id] || "new";
+  const LABEL = { new: "New", learning: "Learning", known: "Mastered" };
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+
+  function buildQueue() {
+    let cards = cardsIn(S.deck);
+    if (S.onlyUnmastered) cards = cards.filter((c) => statusOf(c.id) !== "known");
+    S.queue = shuffle(cards.map((c) => c.id));
+    S.idx = 0; S.flipped = false; S.started = true;
+    S.fromBrowse = false; $("#btn-tobrowse").hidden = true;
+    S.round = { known: 0, learning: 0, missed: new Set(), requeued: new Set() };
+    renderStage();
+  }
+
+  /* ---------- saving progress (one write in flight, coalesced) ---------- */
+  let saveTimer = null, saving = false, dirty = false;
+  function scheduleSave() {
+    if (!progRef || !S.canSave) return;
+    dirty = true; clearTimeout(saveTimer); saveTimer = setTimeout(flush, 700);
+  }
+  async function flush() {
+    if (saving || !dirty || !progRef) return;
+    saving = true; dirty = false;
+    try { await progRef.set({ cards: { ...S.progress }, updatedAt: Date.now() }); }
+    catch (e) {
+      if (e && e.code === "unavailable") { dirty = true; setTimeout(flush, 1500 + Math.random() * 1000); }
+      else if (e && e.code === "invalid_argument") { S.canSave = false; toast("Progress can't be saved for this account."); }
+      else toast("Couldn't save progress. It will retry on your next answer.");
+    }
+    saving = false;
+    if (dirty) flush();
+  }
+
+  /* ---------- rendering ---------- */
+  function renderMeter() {
+    const cards = cardsIn(S.deck);
+    let k = 0, l = 0;
+    for (const c of cards) { const s = statusOf(c.id); if (s === "known") k++; else if (s === "learning") l++; }
+    const n = cards.length, nw = n - k - l, pct = (x) => (n ? (x / n) * 100 : 0);
+    const name = deckName(S.deck);
+    $("#meter").innerHTML = n ? `
+      <div class="meter-row"><span><strong>${esc(name)}</strong> · ${Math.round(pct(k))}% mastered</span>
+        <span class="legend">
+          <span style="--c:var(--good)">${k} mastered</span>
+          <span style="--c:var(--warn)">${l} learning</span>
+          <span style="--c:var(--accent)">${nw} new</span>
+        </span></div>
+      <div class="bar" role="img" aria-label="${k} mastered, ${l} learning, ${nw} new">
+        <i style="width:${pct(k)}%;background:var(--good)"></i><i style="width:${pct(l)}%;background:var(--warn)"></i><i style="width:${pct(nw)}%;background:var(--accent);opacity:.35"></i>
+      </div>` : "";
+  }
+
+  function deckName(id) {
+    if (id === "all") return "All topics";
+    if (id.startsWith("list:")) { const l = S.lists.find((x) => "list:" + x.id === id); return l ? l.name : "List"; }
+    return (S.decks.find((d) => d.id === id) || {}).name || "";
+  }
+  function renderDecks() {
+    const chip = (id, name, tag) => {
+      const cs = cardsIn(id), k = cs.filter((c) => statusOf(c.id) === "known").length;
+      return `<button class="chip" data-deck="${esc(id)}" aria-pressed="${S.deck === id}">${tag ? `<span class="tag">List</span>` : ""}${esc(name)} <small>${k}/${cs.length}</small></button>`;
+    };
+    $("#decks").innerHTML = S.decks.length
+      ? chip("all", "All topics") + S.decks.map((d) => chip(d.id, d.name)).join("") +
+        (S.lists.length ? `<span class="chip-sep" aria-hidden="true"></span>` + S.lists.map((l) => chip("list:" + l.id, l.name, true)).join("") : "")
+      : "";
+    $("#add-topic").innerHTML = S.decks.map((d) => `<option value="${esc(d.id)}"${d.id === S.deck ? " selected" : ""}>${esc(d.name)}</option>`).join("");
+  }
+
+  function notice(title, body, buttons = "") {
+    return `<div class="notice"><h2>${esc(title)}</h2><p>${esc(body)}</p>${buttons ? `<div class="btn-row">${buttons}</div>` : ""}</div>`;
+  }
+
+  function renderStage() { renderStageInner(); renderExample(); renderCardTools(); }
+  function renderStageInner() {
+    const st = $("#stage");
+    const disable = (on) => { $("#btn-learn").disabled = on; $("#btn-know").disabled = on; $("#btn-back").disabled = on || S.idx === 0; };
+    if (S.status === "nodb") { disable(true); st.innerHTML = notice("Cards couldn't load", "This browser blocked local storage or the data file. Open the app from its web address, not as a file on your computer."); return; }
+    if (S.status === "loading") { disable(true); st.innerHTML = notice("Loading your cards…", "Fetching your deck and study progress."); return; }
+    if (S.status === "slow") { disable(true); st.innerHTML = notice("Can't reach your cards yet", "Check your internet connection. This page keeps trying and will load as soon as it connects."); return; }
+    if (S.status === "error") { disable(true); st.innerHTML = notice("Cards couldn't load", "Something went wrong reaching your deck. Reload the page to try again."); return; }
+    if (!byId.size) { disable(true); st.innerHTML = notice("No cards yet", "Add your first card from the Add card tab."); return; }
+
+    if (!S.queue.length) {
+      disable(true);
+      st.innerHTML = S.onlyUnmastered
+        ? notice("Every card here is mastered", "Nice work. Turn off “Skip mastered cards” to review them, or pick another topic.", `<button class="btn btn-primary" data-act="show-all">Review all cards</button>`)
+        : S.deck.startsWith("list:")
+          ? notice("This list is empty", "Pick a topic, then tap “+ Add to list” under any card to add it here.")
+          : notice("No cards in this topic", "Add cards to this topic from the Add card tab.");
+      return;
+    }
+    if (S.idx >= S.queue.length) {
+      disable(true);
+      const missed = S.round.missed.size;
+      st.innerHTML = `<div class="notice"><h2>Round complete</h2>
+        <div class="score"><span><b style="color:var(--good)">${S.round.known}</b>got it</span><span><b style="color:var(--warn)">${missed}</b>missed</span></div>
+        <p>${missed ? "Go over the cards you missed while they're fresh, or start a new shuffled round." : "You got every card. Start a new round or switch topics."}</p>
+        <div class="btn-row">${missed ? `<button class="btn btn-learn" data-act="missed">Study the ${missed} I missed</button>` : ""}<button class="btn btn-primary" data-act="again">New round</button>${S.deck.startsWith("list:") ? `<button class="btn" data-act="test">Take a test</button>` : ""}</div></div>`;
+      return;
+    }
+    disable(false);
+    const c = byId.get(S.queue[S.idx]);
+    if (!c) { S.queue.splice(S.idx, 1); return renderStage(); }
+    const s = statusOf(c.id);
+    const termFace = `<div class="face-body"><p class="term">${esc(c.term)}</p></div>`;
+    const defFace = `<div class="face-body"><p class="def">${esc(c.def)}</p></div>`;
+    const top = `<div class="face-top"><span class="topic">${esc(c.topicName)}</span><span class="pill st-${s}">${LABEL[s]}</span></div>`;
+    const foot = (hint) => `<div class="face-foot ruled"><span>${S.idx + 1} / ${S.queue.length}</span><span>${hint}</span></div>`;
+    const front = S.defFirst ? defFace : termFace, back = S.defFirst ? termFace : defFace;
+    st.innerHTML = `<div class="card${S.flipped ? " is-flipped" : ""}" id="card" role="button" tabindex="0" aria-label="Flashcard. Activate to flip.">
+      <div class="face front">${top}${front}${foot(S.defFirst ? "Tap to see term" : "Tap to see definition")}</div>
+      <div class="face back" aria-hidden="true">${top}${back}${foot(S.defFirst ? "Term" : "Definition")}</div></div>`;
+  }
+
+  /* ---------- real-world examples (AI + Google) ---------- */
+  let sampleFn = null, sampleOk = true;
+  const examples = {};
+  const gen = { id: null, text: "", err: "", errId: null };
+  function currentCard() { return S.status === "ready" && S.idx < S.queue.length ? byId.get(S.queue[S.idx]) : null; }
+  function exHtml(text) {
+    return String(text).split(/\n+/).map((s) => s.trim()).filter(Boolean).map((l) => {
+      const m = l.match(/^\**exam tip:?\**\s*(.*)$/i);
+      return m ? `<p class="ex-tip"><b>Exam tip:</b> ${esc(m[1])}</p>` : `<p>${esc(l)}</p>`;
+    }).join("");
+  }
+  function renderExample() {
+    const box = $("#example"), c = currentCard();
+    if (!c || !S.flipped) { box.hidden = true; return; }
+    box.hidden = false;
+    const ai = sampleFn && sampleOk;
+    const google = `<a class="btn btn-sm" href="https://www.google.com/search?q=${encodeURIComponent(c.term + " real estate example")}" target="_blank" rel="noopener">Search Google ↗</a>`;
+    const saved = examples[c.id];
+    let body, acts;
+    if (gen.id === c.id) {
+      body = gen.text ? exHtml(gen.text) : `<p class="ex-muted">Writing an example…</p>`;
+      acts = google;
+    } else if (saved) {
+      body = exHtml(saved);
+      acts = (ai && !gen.id ? `<button class="btn btn-sm" data-ex="gen">Try another example</button>` : "") + google;
+    } else {
+      const msg = gen.errId === c.id && gen.err ? gen.err : ai ? "See how this term shows up in an actual property deal." : "Search Google to see this term used in context.";
+      body = `<p class="ex-muted">${esc(msg)}</p>`;
+      acts = (ai && !gen.id ? `<button class="btn btn-sm btn-primary" data-ex="gen">Show a real-world example</button>` : "") + google;
+    }
+    $("#ex-body").innerHTML = body;
+    $("#ex-actions").innerHTML = acts;
+  }
+  async function genExample() {
+    const c = currentCard();
+    if (!c || !sampleFn || gen.id) return;
+    gen.id = c.id; gen.text = ""; gen.err = ""; gen.errId = null;
+    renderExample();
+    const prompt = `You help someone study for a US real estate salesperson licensing exam.
+
+Term: ${c.term}
+Definition: ${c.def}
+
+Write one concrete, realistic scenario in 3 to 4 sentences that shows this term in an actual property situation or transaction. Use made-up first names and specific details such as prices, places, or dates. Then, on a new line starting with "Exam tip:", give one short sentence on how the exam typically tests this term or what it is commonly confused with.
+
+Plain text only. No markdown, no headings, no bullet points.`;
+    try {
+      const res = await sampleFn(prompt, {
+        modelTier: "quick", cache: false,
+        onText: ({ text }) => {
+          gen.text = text;
+          const cur = currentCard();
+          if (cur && cur.id === c.id && S.flipped) $("#ex-body").innerHTML = exHtml(text);
+        },
+      });
+      const text = ((res && res.text) || gen.text || "").trim();
+      if (text) {
+        examples[c.id] = text;
+        if (db) db.collection("examples").doc(c.id).set({ text, term: c.term, createdAt: Date.now() }).catch(() => {});
+      }
+    } catch (e) {
+      const code = e && e.code;
+      if (code === "not_granted") sampleOk = false;
+      gen.errId = c.id;
+      gen.err = code === "rate_limited" ? "Too many examples requested in a short time. Wait a minute and try again."
+        : code === "not_granted" ? "AI examples are turned off for this page. Use Google search instead."
+        : "Couldn't write an example right now. Try again.";
+    }
+    gen.id = null; gen.text = "";
+    renderExample();
+  }
+  $("#example").addEventListener("click", (e) => { if (e.target.closest('[data-ex="gen"]')) genExample(); });
+
+  function renderBrowse() {
+    const q = $("#search").value.trim().toLowerCase();
+    const only = S.deck !== "all" && $("#browse-only").checked;
+    $("#browse-only-wrap").hidden = S.deck === "all";
+    $("#browse-only-label").textContent = "Only show " + deckName(S.deck);
+    let cards = cardsIn(only ? S.deck : "all");
+    if (q) cards = cards.filter((c) => (c.term + " " + c.def).toLowerCase().includes(q));
+    cards.sort((a, b) => a.term.localeCompare(b.term));
+    S.browseIds = cards.map((c) => c.id);
+    $("#browse-count").textContent = byId.size ? `${cards.length} card${cards.length === 1 ? "" : "s"}${q ? " match" : ""} in ${only ? deckName(S.deck) : "all topics"} · tap a status to change it` : "";
+    $("#list").innerHTML = cards.map((c) => {
+      const s = statusOf(c.id);
+      return `<article class="row"><h3><button class="row-open" data-open-card="${esc(c.id)}" title="Study this card">${esc(c.term)}</button></h3><div class="row-side">
+        <button class="del" data-tolist="${esc(c.id)}">+ List</button>
+        <button class="pill st-${s}" data-cycle="${esc(c.id)}" title="Change status">${LABEL[s]}</button>
+        ${c.custom ? `<button class="del" data-del="${esc(c.id)}">Delete</button>` : ""}</div>
+        <p class="row-def" data-open-card="${esc(c.id)}">${esc(c.def)}</p></article>`;
+    }).join("") || (byId.size ? `<p class="count-note">No cards match “${esc(q)}”.</p>` : "");
+  }
+
+  function renderAll() { renderMeter(); renderDecks(); renderStage(); if (S.view === "browse") renderBrowse(); if (S.view === "lists") renderLists(); }
+
+  /* ---------- lists ---------- */
+  let lastList = store.get("lastList", null);
+  const listChains = {};
+  function saveListIds(list, ids) {
+    list.cardIds = ids;
+    const id = list.id;
+    listChains[id] = (listChains[id] || Promise.resolve())
+      .then(() => db.collection("lists").doc(id).update({ cardIds: ids }))
+      .catch(() => toast("Couldn't update the list. Try again."));
+  }
+  function saveListPatch(list, patch) {
+    Object.assign(list, patch);
+    const id = list.id;
+    listChains[id] = (listChains[id] || Promise.resolve())
+      .then(() => db.collection("lists").doc(id).update(patch))
+      .catch(() => {});
+  }
+
+  /* ---------- multiple-choice test ---------- */
+  let T = null;
+  function makeQuestions(ids) {
+    const all = [...byId.values()];
+    return shuffle(ids.filter((id) => byId.has(id))).map((id) => {
+      const c = byId.get(id), norm = (s) => s.trim().toLowerCase();
+      const pool = all.filter((x) => x.id !== id && norm(x.def) !== norm(c.def));
+      const ordered = [...shuffle(pool.filter((x) => x.topic === c.topic)), ...shuffle(pool.filter((x) => x.topic !== c.topic))];
+      const picks = [];
+      for (const x of ordered) { if (picks.length === 3) break; if (!picks.some((p) => norm(p.def) === norm(x.def))) picks.push(x); }
+      return { id, opts: shuffle([c, ...picks].map((x) => x.id)) };
+    });
+  }
+  function startTest(listId, onlyIds, from) {
+    const l = S.lists.find((x) => x.id === listId); if (!l) return;
+    const ids = onlyIds || l.cardIds;
+    const qs = makeQuestions(ids);
+    if (!qs.length) { toast("This list has no cards to test."); return; }
+    T = { listId, name: l.name, qs, i: 0, picked: null, correct: 0, missed: [], full: !onlyIds, from: from || "lists" };
+    setView("test"); renderTest(); window.scrollTo(0, 0);
+  }
+  function pickAnswer(k) {
+    if (!T || T.picked != null || T.i >= T.qs.length) return;
+    const q = T.qs[T.i]; if (k >= q.opts.length) return;
+    T.picked = k;
+    if (q.opts[k] === q.id) T.correct++;
+    else { T.missed.push(q.id); S.progress[q.id] = "learning"; scheduleSave(); }
+    renderTest();
+    const nx = $("#t-next"); if (nx) { nx.focus({ preventScroll: true }); nx.scrollIntoView({ block: "nearest" }); }
+  }
+  function nextQuestion() {
+    if (!T || T.picked == null) return;
+    T.i++; T.picked = null;
+    if (T.i >= T.qs.length && T.full) {
+      const l = S.lists.find((x) => x.id === T.listId);
+      if (l && db) saveListPatch(l, { lastTest: { correct: T.correct, total: T.qs.length, at: Date.now() } });
+    }
+    renderTest(); window.scrollTo(0, 0);
+  }
+  function renderTest() {
+    const el = $("#view-test"); if (!T) { el.innerHTML = ""; return; }
+    const n = T.qs.length;
+    if (T.i >= n) {
+      const pct = Math.round((T.correct / n) * 100), m = T.missed.length;
+      el.innerHTML = `<div class="t-head"><strong>${esc(T.name)}</strong><span>Test results</span></div>
+        <div class="notice"><h2>${T.correct} of ${n} correct</h2>
+          <div class="score"><span><b style="color:${pct >= 75 ? "var(--good)" : "var(--warn)"}">${pct}%</b>score</span></div>
+          <p>${m ? `The ${m === 1 ? "term" : m + " terms"} you missed ${m === 1 ? "is" : "are"} below and now marked “Learning”.` : "Perfect score. Every answer was right."}</p>
+          <div class="btn-row">${m ? `<button class="btn btn-learn" data-t="missed">Retest the ${m} I missed</button>` : ""}<button class="btn btn-primary" data-t="retake">Retake test</button><button class="btn" data-t="exit">Done</button></div></div>
+        ${m ? `<div class="list">${T.missed.map((id) => { const c = byId.get(id); return c ? `<article class="row"><h3>${esc(c.term)}</h3><div></div><p>${esc(c.def)}</p></article>` : ""; }).join("")}</div>` : ""}`;
+      return;
+    }
+    const q = T.qs[T.i], c = byId.get(q.id), ans = q.opts.indexOf(q.id), done = T.picked != null, ok = done && T.picked === ans;
+    el.innerHTML = `<div class="t-head"><strong>${esc(T.name)}</strong><span>Question ${T.i + 1} of ${n} · ${T.correct} correct</span></div>
+      <div class="bar"><i style="width:${(T.i / n) * 100}%;background:var(--accent)"></i></div>
+      <div class="t-q"><span class="topic">Pick the correct definition</span><p class="term">${esc(c ? c.term : "")}</p></div>
+      <div class="t-opts">${q.opts.map((oid, k) => {
+        const o = byId.get(oid);
+        const cls = !done ? "" : k === ans ? " right" : k === T.picked ? " wrong" : " dim";
+        return `<button class="t-opt${cls}" data-opt="${k}"${done ? " disabled" : ""}><span class="t-key">${"ABCD"[k]}</span><span>${esc(o ? o.def : "")}</span></button>`;
+      }).join("")}</div>
+      <div class="t-foot">${done
+        ? `<p class="t-feedback ${ok ? "ok" : "no"}"><b>${ok ? "Correct." : "Not quite."}</b>${ok ? "" : ` The answer is ${"ABCD"[ans]}.`}</p><button class="btn btn-primary" id="t-next" data-t="next">${T.i + 1 === n ? "See results" : "Next question"}</button>`
+        : `<span class="keys"><span class="k">Press 1–4 or A–D to answer</span></span><button class="link-btn" data-t="exit">Exit test</button>`}</div>`;
+  }
+  $("#view-test").addEventListener("click", (e) => {
+    const o = e.target.closest("[data-opt]");
+    if (o) { pickAnswer(+o.dataset.opt); return; }
+    const b = e.target.closest("[data-t]"); if (!b || !T) return;
+    const a = b.dataset.t;
+    if (a === "next") nextQuestion();
+    else if (a === "retake") startTest(T.listId, null, T.from);
+    else if (a === "missed") startTest(T.listId, [...T.missed], T.from);
+    else if (a === "exit") { const from = T.from; T = null; setView(from); if (from === "study") renderAll(); }
+  });
+  function afterListChange() { renderDecks(); renderMeter(); renderCardTools(); if (S.view === "lists") renderLists(); if (S.view === "browse") renderBrowse(); }
+  function removeFromList(cardId, listId) {
+    const l = S.lists.find((x) => x.id === listId); if (!l) return;
+    saveListIds(l, l.cardIds.filter((x) => x !== cardId));
+    toast(`Removed from ${l.name}`);
+    afterListChange();
+  }
+  function renderCardTools() {
+    const t = $("#card-tools"), c = currentCard();
+    if (!c) { t.hidden = true; return; }
+    t.hidden = false;
+    const inL = S.lists.filter((l) => l.cardIds.includes(c.id));
+    $("#card-lists").textContent = inL.length ? "In: " + inL.map((l) => l.name).join(", ") : "";
+  }
+
+  let sheetCard = null;
+  function openSheet(cardId) {
+    if (!db) { toast("Lists aren't available in this browser."); return; }
+    const c = byId.get(cardId); if (!c) return;
+    sheetCard = cardId;
+    $("#sheet-term").textContent = c.term;
+    $("#sheet-new").value = "";
+    fillSheet();
+    $("#sheet").hidden = false;
+    setTimeout(() => ($("#sheet-list").value === "__new" ? $("#sheet-new") : $("#sheet-list")).focus(), 0);
+  }
+  function fillSheet() {
+    const id = sheetCard, sel = $("#sheet-list");
+    const has = (l) => l.cardIds.includes(id);
+    sel.innerHTML = S.lists.map((l) => `<option value="${esc(l.id)}"${has(l) ? " disabled" : ""}>${esc(l.name)}${has(l) ? " (already added)" : ""}</option>`).join("") +
+      `<option value="__new">+ New list…</option>`;
+    const avail = S.lists.filter((l) => !has(l));
+    const def = avail.find((l) => l.id === lastList) || (S.lists.some((l) => l.id === lastList) ? avail[0] : avail[avail.length - 1]);
+    sel.value = def ? def.id : "__new";
+    toggleNew();
+    const inL = S.lists.filter(has);
+    $("#sheet-in").innerHTML = inL.length ? `<span>Already in:</span>` + inL.map((l) => `<button class="rm-chip" data-rm="${esc(l.id)}" aria-label="Remove from ${esc(l.name)}">${esc(l.name)} ×</button>`).join("") : "";
+  }
+  function toggleNew() {
+    const isNew = $("#sheet-list").value === "__new";
+    $("#sheet-new-wrap").hidden = !isNew;
+    $("#sheet-add").textContent = isNew ? "Create list & add" : "Add";
+  }
+  function closeSheet() { $("#sheet").hidden = true; sheetCard = null; }
+  async function sheetAdd() {
+    const id = sheetCard; if (!id) return;
+    const v = $("#sheet-list").value; let name;
+    if (v === "__new") {
+      name = $("#sheet-new").value.trim();
+      if (!name) { $("#sheet-new").focus(); return; }
+      const btn = $("#sheet-add"); btn.disabled = true;
+      try {
+        const ref = await db.collection("lists").add({ name, cardIds: [id], createdAt: Date.now() });
+        lastList = ref.id; store.set("lastList", lastList);
+      } catch (e) {
+        toast(e && e.code === "quota_exceeded" ? "Too many lists. Delete one first." : "Couldn't create the list. Try again.");
+        btn.disabled = false; return;
+      }
+      btn.disabled = false;
+    } else {
+      const l = S.lists.find((x) => x.id === v); if (!l) return;
+      name = l.name;
+      if (!l.cardIds.includes(id)) saveListIds(l, [...l.cardIds, id]);
+      lastList = l.id; store.set("lastList", lastList);
+    }
+    closeSheet(); toast(`Added to ${name}`); afterListChange();
+  }
+  $("#sheet-list").addEventListener("change", toggleNew);
+  $("#sheet-new").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); sheetAdd(); } });
+  $("#sheet").addEventListener("click", (e) => {
+    if (e.target.id === "sheet") { closeSheet(); return; }
+    const rm = e.target.closest("[data-rm]");
+    if (rm) { removeFromList(sheetCard, rm.dataset.rm); fillSheet(); return; }
+    const b = e.target.closest("[data-sheet]"); if (!b) return;
+    if (b.dataset.sheet === "cancel") closeSheet(); else sheetAdd();
+  });
+  $("#btn-tolist").addEventListener("click", () => { const c = currentCard(); if (c) openSheet(c.id); });
+
+  const openLists = new Set();
+  let armedList = null;
+  function renderLists() {
+    const el = $("#lists");
+    if (!S.lists.length) { el.innerHTML = `<p class="count-note">No lists yet. Create one above, or tap “+ Add to list” under a card while studying.</p>`; return; }
+    el.innerHTML = S.lists.map((l) => {
+      const cs = l.cardIds.map((id) => byId.get(id)).filter(Boolean).sort((a, b) => a.term.localeCompare(b.term));
+      const n = cs.length, k = cs.filter((c) => statusOf(c.id) === "known").length, pct = n ? (k / n) * 100 : 0;
+      const armed = armedList === l.id;
+      const terms = cs.map((c) => { const s = statusOf(c.id); return `<li><span>${esc(c.term)} <span class="pill st-${s}">${LABEL[s]}</span></span><button class="del" data-rmterm="${esc(c.id)}" data-list="${esc(l.id)}">Remove</button></li>`; }).join("");
+      return `<article class="lcard">
+        <div class="lhead"><div><h3>${esc(l.name)}</h3><p class="lmeta">${n} term${n === 1 ? "" : "s"} · ${k} mastered${n && k === n ? " · all memorized" : ""}${l.lastTest && l.lastTest.total ? ` · last test ${l.lastTest.correct}/${l.lastTest.total} (${Math.round((l.lastTest.correct / l.lastTest.total) * 100)}%)` : ""}</p></div>
+          <div class="lbtns"><button class="btn btn-sm btn-primary" data-study="${esc(l.id)}"${n ? "" : " disabled"}>Study</button>
+          <button class="btn btn-sm" data-test="${esc(l.id)}"${n ? "" : " disabled"}>Test</button>
+          <button class="del${armed ? " armed" : ""}" data-dellist="${esc(l.id)}">${armed ? "Confirm delete" : "Delete list"}</button></div></div>
+        ${n ? `<div class="bar" role="img" aria-label="${k} of ${n} mastered"><i style="width:${pct}%;background:var(--good)"></i></div>
+          <details data-open="${esc(l.id)}"${openLists.has(l.id) ? " open" : ""}><summary>Show terms</summary><ul class="lterms">${terms}</ul></details>`
+          : `<p class="lmeta">Empty. Tap “+ Add to list” under any card to add it here.</p>`}
+      </article>`;
+    }).join("");
+  }
+  $("#lists").addEventListener("toggle", (e) => { const d = e.target; if (d.dataset && d.dataset.open) { if (d.open) openLists.add(d.dataset.open); else openLists.delete(d.dataset.open); } }, true);
+  $("#lists").addEventListener("click", async (e) => {
+    const st = e.target.closest("[data-study]");
+    if (st) { S.deck = "list:" + st.dataset.study; store.set("deck", S.deck); setView("study"); renderMeter(); renderDecks(); buildQueue(); window.scrollTo(0, 0);
+      const on = document.querySelector("#decks .chip[aria-pressed=true]"), sc = document.querySelector(".decks-scroll");
+      if (on && sc) sc.scrollLeft = on.offsetLeft - 8;
+      return; }
+    const te = e.target.closest("[data-test]");
+    if (te) { startTest(te.dataset.test, null, "lists"); return; }
+    const rt = e.target.closest("[data-rmterm]");
+    if (rt) { removeFromList(rt.dataset.rmterm, rt.dataset.list); return; }
+    const dl = e.target.closest("[data-dellist]");
+    if (!dl || !db) return;
+    const id = dl.dataset.dellist;
+    if (armedList !== id) { armedList = id; renderLists(); return; }
+    armedList = null;
+    const l = S.lists.find((x) => x.id === id);
+    try { await db.collection("lists").doc(id).delete(); toast(`Deleted “${l ? l.name : "list"}”`); }
+    catch (err) { toast("Couldn't delete the list. Try again."); renderLists(); }
+  });
+  $("#newlist-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!db) { toast("Lists aren't available in this browser."); return; }
+    const name = $("#newlist-name").value.trim(); if (!name) return;
+    try {
+      const ref = await db.collection("lists").add({ name, cardIds: [], createdAt: Date.now() });
+      lastList = ref.id; store.set("lastList", lastList);
+      $("#newlist-name").value = ""; toast(`Created “${name}”`);
+    } catch (err) { toast(err && err.code === "quota_exceeded" ? "Too many lists. Delete one first." : "Couldn't create the list. Try again."); }
+  });
+
+  let toastTimer;
+  function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => (t.hidden = true), 2600); }
+
+  /* ---------- actions ---------- */
+  function flip() {
+    const card = $("#card"); if (!card) return;
+    S.flipped = !S.flipped; card.classList.toggle("is-flipped", S.flipped);
+    card.querySelector(".front").setAttribute("aria-hidden", S.flipped);
+    card.querySelector(".back").setAttribute("aria-hidden", !S.flipped);
+    renderExample();
+  }
+  function mark(status) {
+    if (S.idx >= S.queue.length) return;
+    const id = S.queue[S.idx];
+    S.progress[id] = status; scheduleSave();
+    if (status === "known") S.round.known++;
+    else {
+      S.round.missed.add(id);
+      if (!S.round.requeued.has(id)) { S.round.requeued.add(id); S.queue.splice(Math.min(S.idx + 5, S.queue.length), 0, id); }
+    }
+    S.idx++; S.flipped = false;
+    renderMeter(); renderDecks(); renderStage();
+  }
+  function back() { if (S.idx > 0) { S.idx--; S.flipped = false; renderStage(); } }
+  function setView(v) {
+    S.view = v;
+    document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", t.dataset.view === v));
+    document.querySelectorAll(".view").forEach((el) => (el.hidden = el.id !== "view-" + v));
+    if (v === "browse") renderBrowse();
+    if (v === "lists") renderLists();
+    $("#meter").hidden = v === "test";
+    document.querySelector(".decks-scroll").hidden = v === "test";
+  }
+
+  document.querySelector(".tabs").addEventListener("click", (e) => { const b = e.target.closest(".tab"); if (b) setView(b.dataset.view); });
+  $("#decks").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    S.deck = b.dataset.deck; store.set("deck", S.deck);
+    renderMeter(); renderDecks(); buildQueue(); if (S.view === "browse") renderBrowse();
+  });
+  $("#opt-unmastered").checked = S.onlyUnmastered;
+  $("#opt-deffirst").checked = S.defFirst;
+  $("#opt-unmastered").addEventListener("change", (e) => { S.onlyUnmastered = e.target.checked; store.set("onlyUnmastered", S.onlyUnmastered); buildQueue(); });
+  $("#opt-deffirst").addEventListener("change", (e) => { S.defFirst = e.target.checked; store.set("defFirst", S.defFirst); S.flipped = false; renderStage(); });
+  $("#btn-restart").addEventListener("click", buildQueue);
+  $("#btn-tobrowse").addEventListener("click", () => setView("browse"));
+  $("#btn-learn").addEventListener("click", () => mark("learning"));
+  $("#btn-know").addEventListener("click", () => mark("known"));
+  $("#btn-back").addEventListener("click", back);
+
+  const stage = $("#stage");
+  let tx = null, ty = null, swiped = false;
+  stage.addEventListener("touchstart", (e) => { if (!e.target.closest("#card")) return; tx = e.touches[0].clientX; ty = e.touches[0].clientY; swiped = false; }, { passive: true });
+  stage.addEventListener("touchend", (e) => {
+    if (tx == null) return;
+    const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty; tx = null;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; mark(dx > 0 ? "known" : "learning"); }
+  });
+  stage.addEventListener("click", (e) => {
+    const act = e.target.closest("[data-act]");
+    if (act) {
+      const a = act.dataset.act;
+      if (a === "again") buildQueue();
+      else if (a === "test") startTest(S.deck.slice(5), null, "study");
+      else if (a === "show-all") { S.onlyUnmastered = false; $("#opt-unmastered").checked = false; store.set("onlyUnmastered", false); buildQueue(); }
+      else if (a === "missed") {
+        const ids = shuffle([...S.round.missed]);
+        S.queue = ids; S.idx = 0; S.flipped = false; S.round = { known: 0, learning: 0, missed: new Set(), requeued: new Set() }; renderStage();
+      }
+      return;
+    }
+    if (e.target.closest("#card")) { if (swiped) { swiped = false; return; } flip(); }
+  });
+  stage.addEventListener("keydown", (e) => { if (e.target.id === "card" && e.key === "Enter") { e.preventDefault(); flip(); } });
+  document.addEventListener("keydown", (e) => {
+    if (!$("#sheet").hidden) { if (e.key === "Escape") closeSheet(); return; }
+    if (S.view === "test" && T && !e.metaKey && !e.ctrlKey && !e.altKey) {
+      const k = "1234".indexOf(e.key) >= 0 ? "1234".indexOf(e.key) : "abcd".indexOf(e.key.toLowerCase());
+      if (k >= 0 && e.key.length === 1 && T.picked == null) { e.preventDefault(); pickAnswer(k); }
+      else if ((e.key === "Enter" || e.key === "ArrowRight") && T.picked != null) { e.preventDefault(); nextQuestion(); }
+      return;
+    }
+    if (S.view !== "study" || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    if (e.key === " ") { e.preventDefault(); flip(); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); mark("known"); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); mark("learning"); }
+  });
+
+  $("#search").addEventListener("input", renderBrowse);
+  $("#browse-only").addEventListener("change", renderBrowse);
+  const CYCLE = { new: "learning", learning: "known", known: "new" };
+  let armed = null;
+  $("#list").addEventListener("click", async (e) => {
+    const tl = e.target.closest("[data-tolist]");
+    if (tl) { openSheet(tl.dataset.tolist); return; }
+    const oc = e.target.closest("[data-open-card]");
+    if (oc) {
+      const ids = S.browseIds || [], i = Math.max(0, ids.indexOf(oc.dataset.openCard));
+      S.queue = [...ids.slice(i), ...ids.slice(0, i)];
+      S.idx = 0; S.flipped = false; S.started = true;
+      S.round = { known: 0, learning: 0, missed: new Set(), requeued: new Set() };
+      S.fromBrowse = true; $("#btn-tobrowse").hidden = false;
+      setView("study"); renderStage(); window.scrollTo(0, 0);
+      return;
+    }
+    const cyc = e.target.closest("[data-cycle]");
+    if (cyc) {
+      const id = cyc.dataset.cycle, nx = CYCLE[statusOf(id)];
+      if (nx === "new") delete S.progress[id]; else S.progress[id] = nx;
+      scheduleSave(); renderMeter(); renderDecks(); renderBrowse(); return;
+    }
+    const del = e.target.closest("[data-del]");
+    if (!del || !db) return;
+    const id = del.dataset.del;
+    if (armed !== id) { armed = id; renderBrowse(); const b = $(`[data-del="${CSS.escape(id)}"]`); if (b) { b.classList.add("armed"); b.textContent = "Confirm delete"; } return; }
+    armed = null;
+    try { await db.collection("cards").doc(id).delete(); delete S.progress[id]; scheduleSave(); toast("Card deleted"); }
+    catch (err) { toast("Couldn't delete that card. Try again."); }
+  });
+
+  $("#add-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!db) { toast("Adding cards isn't available in this browser."); return; }
+    const topic = $("#add-topic").value, term = $("#add-term").value.trim(), def = $("#add-def").value.trim();
+    if (!term || !def) return;
+    const btn = $("#add-submit"); btn.disabled = true;
+    try {
+      const ref = await db.collection("cards").add({ topic, term, def, createdAt: Date.now() });
+      if (S.started && (S.deck === "all" || S.deck === topic)) S.queue.push(ref.id);
+      $("#add-term").value = ""; $("#add-def").value = ""; $("#add-term").focus();
+      toast(`Added to ${(S.decks.find((d) => d.id === topic) || {}).name || "your deck"}`);
+    } catch (err) {
+      toast(err && err.code === "quota_exceeded" ? "Your deck is full. Delete some cards first." : "Couldn't add the card. Try again.");
+    }
+    btn.disabled = false;
+  });
+
+  /* ---------- boot ---------- */
+  renderAll();
+  (async () => {
+    const c = window.claude;
+    if (!c || typeof c.use !== "function") { S.status = "nodb"; renderStage(); return; }
+    const slow = setTimeout(() => { if (S.status === "loading") { S.status = "slow"; renderStage(); } }, 10000);
+    const [dbNs, user, smp] = await Promise.all([c.use("db"), c.use("user"), c.use("sample")]);
+    db = dbNs; sampleFn = smp;
+    if (!db) { clearTimeout(slow); S.status = "nodb"; renderStage(); return; }
+    const uid = user ? await user.id() : null;
+
+    let decksIn = false, customIn = false, listsIn = false;
+    const onData = (definitive) => {
+      rebuildIndex();
+      if (decksIn && customIn && listsIn &&(S.status === "loading" || S.status === "slow")) {
+        if (definitive || byId.size) { clearTimeout(slow); S.status = "ready"; }
+      }
+      if (S.status === "ready" && !S.started && byId.size) { renderMeter(); renderDecks(); buildQueue(); }
+      else renderAll();
+    };
+    const fail = (e) => { clearTimeout(slow); if (S.status !== "ready") { S.status = "error"; renderStage(); } };
+
+    db.collection("decks").onSnapshot((snap) => {
+      S.decks = snap.docs.map((d) => ({ id: d.id, ...d.data() })).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+      decksIn = true; onData(!snap.metadata.fromCache);
+    }, fail);
+    db.collection("cards").onSnapshot((snap) => {
+      S.custom = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      customIn = true; onData(!snap.metadata.fromCache);
+    }, fail);
+
+    db.collection("lists").onSnapshot((snap) => {
+      S.lists = snap.docs.map((d) => {
+        const x = d.data() || {};
+        return { id: d.id, name: x.name || "Untitled list", cardIds: [...(x.cardIds || [])], createdAt: x.createdAt || 0, lastTest: x.lastTest || null };
+      }).sort((a, b) => a.createdAt - b.createdAt);
+      listsIn = true;
+      const definitive = !snap.metadata.fromCache;
+      if (S.deck.startsWith("list:") && definitive && !S.lists.some((l) => "list:" + l.id === S.deck)) {
+        S.deck = "all"; store.set("deck", "all");
+        if (S.started) buildQueue();
+      }
+      onData(definitive);
+    }, fail);
+
+    db.collection("examples").onSnapshot((snap) => {
+      for (const d of snap.docs) { const t = d.data() && d.data().text; if (t) examples[d.id] = t; }
+      if (!gen.id) renderExample();
+    }, () => {});
+
+    if (uid) {
+      progRef = db.doc("data/users/" + uid + "/progress");
+      progRef.onSnapshot((snap) => {
+        if (saving || dirty) return;
+        const data = snap.exists ? snap.data() : null;
+        S.progress = { ...((data && data.cards) || {}) };
+        renderMeter(); renderDecks(); if (S.view === "browse") renderBrowse();
+        const pill = document.querySelector("#card .pill");
+        if (pill && S.idx < S.queue.length) {
+          const s = statusOf(S.queue[S.idx]);
+          document.querySelectorAll("#card .pill").forEach((p) => { p.className = "pill st-" + s; p.textContent = LABEL[s]; });
+        }
+      }, () => {});
+    } else {
+      S.canSave = false;
+    }
+  })();
+})();
+</script>
+
+</body>
+</html>

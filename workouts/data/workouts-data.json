@@ -1,0 +1,47 @@
+{
+  "app": "Workouts",
+  "format_version": 2,
+  "v": 2,
+  "exported": "2026-11-06",
+  "notes": "lists[] are the starter lists loaded the first time the app opens in a browser. Ids use lowercase letters and digits only and must be unique. Photos are JPEG data URLs (longest side 1000 px). This is the same format as the app's Back up lists file.",
+  "lists": [
+    {
+      "id": "main",
+      "name": "My workout",
+      "items": [
+        {
+          "id": "mvwjuxvu6lkg",
+          "name": "TRX Lat Workout",
+          "desc": "",
+          "links": [
+            "https://youtube.com/shorts/GNN_W9I5ngY"
+          ]
+        },
+        {
+          "id": "mvwk13dpak45",
+          "name": "Landmine row",
+          "desc": "",
+          "links": [
+            "https://youtube.com/shorts/MxfJ2m2JQB4"
+          ]
+        },
+        {
+          "id": "mvwk52beq58x",
+          "name": "Dumbell Step",
+          "desc": "",
+          "links": [
+            "https://youtube.com/shorts/r_UZ5OLa--c"
+          ]
+        },
+        {
+          "id": "mvwkap0qpf6u",
+          "name": "Belt Squat Machine",
+          "desc": "",
+          "links": [
+            "https://youtube.com/shorts/CT0vh2V_sjQ"
+          ]
+        }
+      ]
+    }
+  ]
+}
